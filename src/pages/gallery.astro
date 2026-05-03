@@ -1,21 +1,418 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import SectionHeader from '../components/SectionHeader.astro';
 import { Icon } from 'astro-icon/components';
 
 const photos = [
-  { caption: 'Children receiving their holiday gifts at Operation: Holiday Cheer 2023', aspect: 'tall' },
-  { caption: 'Volunteer team wrapping gifts before the big day', aspect: 'wide' },
-  { caption: 'A child opening their personal holiday wish', aspect: 'square' },
-  { caption: 'Families gathering at our annual celebration', aspect: 'wide' },
-  { caption: 'Our amazing volunteers — the heart of K4AC', aspect: 'square' },
-  { caption: 'Gift distribution at Operation: Holiday Cheer', aspect: 'tall' },
-  { caption: 'Community members coming together for the holidays', aspect: 'square' },
-  { caption: 'Spreading holiday cheer across South Florida', aspect: 'wide' },
-  { caption: 'Children dressed in their new holiday outfits', aspect: 'square' },
-  { caption: 'The K4AC team at AIDS Walk Broward', aspect: 'tall' },
-  { caption: 'Sorting and organizing donations for event day', aspect: 'wide' },
-  { caption: 'Every child deserves to feel celebrated', aspect: 'square' },
+  {
+    "url": "https://images.squarespace-cdn.com/content/v1/5b8ed3321aef1d28fc3089b6/1573589319826-49Z6YQFUAGYCRO74XKZ0/IMG_0544.JPG",
+    "caption": "Kidz 4 A Cure Community Memory",
+    "aspect": "wide"
+  },
+  {
+    "url": "https://images.squarespace-cdn.com/content/v1/5b8ed3321aef1d28fc3089b6/1573589373173-38EHVCCPST0Y1BUO4TV1/photo+%282%29.jpg",
+    "caption": "Operation: Holiday Cheer",
+    "aspect": "square"
+  },
+  {
+    "url": "https://images.squarespace-cdn.com/content/v1/5b8ed3321aef1d28fc3089b6/1573589374264-B0XBD5LPBLON7CZVFHRG/photo+%281%29.jpg",
+    "caption": "Spreading Joy",
+    "aspect": "tall"
+  },
+  {
+    "url": "https://images.squarespace-cdn.com/content/v1/5b8ed3321aef1d28fc3089b6/1573589379539-J7I6QUGQEUIO2RP1CEUF/photo+%284%29.jpg",
+    "caption": "Holiday Celebration",
+    "aspect": "tall"
+  },
+  {
+    "url": "https://images.squarespace-cdn.com/content/v1/5b8ed3321aef1d28fc3089b6/1573589379966-2T9XR91G9Y9GRTWLW9OL/photo.jpg",
+    "caption": "K4AC Event",
+    "aspect": "tall"
+  },
+  {
+    "url": "https://images.squarespace-cdn.com/content/v1/5b8ed3321aef1d28fc3089b6/1573589407820-7858DAT1MY63SN74UF1W/photo+%284%29.jpg",
+    "caption": "Community Support",
+    "aspect": "square"
+  },
+  {
+    "url": "https://images.squarespace-cdn.com/content/v1/5b8ed3321aef1d28fc3089b6/1573589410902-TQADWK63YX7KTTNKRAYO/photo+%285%29.jpg",
+    "caption": "Making a Difference",
+    "aspect": "wide"
+  },
+  {
+    "url": "https://images.squarespace-cdn.com/content/v1/5b8ed3321aef1d28fc3089b6/1573589413377-9OKJ46YRQR9I4WZ36PCO/photo+%286%29.jpg",
+    "caption": "Holiday Wishes",
+    "aspect": "tall"
+  },
+  {
+    "url": "https://images.squarespace-cdn.com/content/v1/5b8ed3321aef1d28fc3089b6/1573589416065-HWWBFUFAB4B1CVJHFSN3/photo+%287%29.jpg",
+    "caption": "Smiles and Joy",
+    "aspect": "wide"
+  },
+  {
+    "url": "https://images.squarespace-cdn.com/content/v1/5b8ed3321aef1d28fc3089b6/1573589422758-WA3OS06FECWC7GQ46YTL/photo+%2810%29.jpg",
+    "caption": "K4AC Memory",
+    "aspect": "tall"
+  },
+  {
+    "url": "https://images.squarespace-cdn.com/content/v1/5b8ed3321aef1d28fc3089b6/1573589423193-2HLSAQA1G9V8LQ5HFNVH/photo+%2811%29.jpg",
+    "caption": "Holiday Magic",
+    "aspect": "wide"
+  },
+  {
+    "url": "https://images.squarespace-cdn.com/content/v1/5b8ed3321aef1d28fc3089b6/1573589426918-JF8DKF233T7HLKVXDVVJ/photo+%2813%29.jpg",
+    "caption": "Community Gathering",
+    "aspect": "wide"
+  },
+  {
+    "url": "https://images.squarespace-cdn.com/content/v1/5b8ed3321aef1d28fc3089b6/1573589427394-MZ9VSIGM8BCZ4T2QG1PS/photo+%2812%29.jpg",
+    "caption": "Celebrating Together",
+    "aspect": "square"
+  },
+  {
+    "url": "https://images.squarespace-cdn.com/content/v1/5b8ed3321aef1d28fc3089b6/1573589429926-OGF3UZVOBQSDZS7WEP7P/photo+%2816%29.jpg",
+    "caption": "Holiday Cheer",
+    "aspect": "wide"
+  },
+  {
+    "url": "https://images.squarespace-cdn.com/content/v1/5b8ed3321aef1d28fc3089b6/1573589433608-02WXK6OVU54HT566M3GY/photo+%2817%29.jpg",
+    "caption": "Special Moments",
+    "aspect": "wide"
+  },
+  {
+    "url": "https://images.squarespace-cdn.com/content/v1/5b8ed3321aef1d28fc3089b6/1573589435046-CDN57NUVPL5GE88369TI/photo+%2819%29.jpg",
+    "caption": "K4AC Family",
+    "aspect": "square"
+  },
+  {
+    "url": "https://images.squarespace-cdn.com/content/v1/5b8ed3321aef1d28fc3089b6/1573589436810-PLA0UYL7VYQPYL5WDUJN/photo+%2818%29.jpg",
+    "caption": "Holiday Spirit",
+    "aspect": "wide"
+  },
+  {
+    "url": "https://images.squarespace-cdn.com/content/v1/5b8ed3321aef1d28fc3089b6/1573589439792-JHLCBN15IYU1BF0S41IE/photo.jpg",
+    "caption": "Making Memories",
+    "aspect": "tall"
+  },
+  {
+    "url": "https://images.squarespace-cdn.com/content/v1/5b8ed3321aef1d28fc3089b6/1573589577183-L541UBN5BD8SXKWF1HL2/IMG_0595.JPG",
+    "caption": "Holiday Gifts",
+    "aspect": "square"
+  },
+  {
+    "url": "https://images.squarespace-cdn.com/content/v1/5b8ed3321aef1d28fc3089b6/1573589591120-1XL1VCZ9FWBKKXZMVCGY/IMG_0596.JPG",
+    "caption": "Volunteers at Work",
+    "aspect": "wide"
+  },
+  {
+    "url": "https://images.squarespace-cdn.com/content/v1/5b8ed3321aef1d28fc3089b6/1573589618778-V2JJXI3SMMVKAN2JUS1V/IMG_0597.JPG",
+    "caption": "Community Love",
+    "aspect": "tall"
+  },
+  {
+    "url": "https://images.squarespace-cdn.com/content/v1/5b8ed3321aef1d28fc3089b6/1573589666206-TXA5R6XVN81UISVQT0JI/IMG_0599.JPG",
+    "caption": "Holiday Smiles",
+    "aspect": "wide"
+  },
+  {
+    "url": "https://images.squarespace-cdn.com/content/v1/5b8ed3321aef1d28fc3089b6/1573589680843-B15K86Z5L2AL8WTSG7Q2/IMG_0600.JPG",
+    "caption": "Celebrating Life",
+    "aspect": "wide"
+  },
+  {
+    "url": "https://images.squarespace-cdn.com/content/v1/5b8ed3321aef1d28fc3089b6/1573589716535-Z2I1GALUIM22YV5ULYD5/IMG_0601.JPG",
+    "caption": "K4AC Community",
+    "aspect": "wide"
+  },
+  {
+    "url": "https://images.squarespace-cdn.com/content/v1/5b8ed3321aef1d28fc3089b6/1573589726120-CKOFEU125K3TLM8ZCWHG/IMG_0602.JPG",
+    "caption": "Holiday Celebration",
+    "aspect": "square"
+  },
+  {
+    "url": "https://images.squarespace-cdn.com/content/v1/5b8ed3321aef1d28fc3089b6/1573589762865-8DKEO5TDI4TC7IG3JREG/IMG_0603.JPG",
+    "caption": "Heartfelt Moments",
+    "aspect": "tall"
+  },
+  {
+    "url": "https://images.squarespace-cdn.com/content/v1/5b8ed3321aef1d28fc3089b6/1573589773328-X6D4P7JH5QMS5C8UXTF7/IMG_0604.JPG",
+    "caption": "Joy of Giving",
+    "aspect": "square"
+  },
+  {
+    "url": "https://images.squarespace-cdn.com/content/v1/5b8ed3321aef1d28fc3089b6/1573589804112-R5LY0QYN7MPSO7QO79SJ/IMG_0606.JPG",
+    "caption": "Community Impact",
+    "aspect": "wide"
+  },
+  {
+    "url": "https://images.squarespace-cdn.com/content/v1/5b8ed3321aef1d28fc3089b6/1573589833892-U2XOZUTU4RYLR6AGLYQW/IMG_0607.JPG",
+    "caption": "Holiday Magic",
+    "aspect": "square"
+  },
+  {
+    "url": "https://images.squarespace-cdn.com/content/v1/5b8ed3321aef1d28fc3089b6/1573589882011-6G1HXIJRA2NWE3RTCN6Y/IMG_0611.JPG",
+    "caption": "Spreading Cheer",
+    "aspect": "square"
+  },
+  {
+    "url": "https://images.squarespace-cdn.com/content/v1/5b8ed3321aef1d28fc3089b6/1573589892263-D5Y0JANSAWAC95B3H34Y/IMG_0613.JPG",
+    "caption": "Celebrating Community",
+    "aspect": "tall"
+  },
+  {
+    "url": "https://images.squarespace-cdn.com/content/v1/5b8ed3321aef1d28fc3089b6/1573589916817-3B2QYFT7W1HM3LCA285A/IMG_0614.JPG",
+    "caption": "Holiday Season",
+    "aspect": "wide"
+  },
+  {
+    "url": "https://images.squarespace-cdn.com/content/v1/5b8ed3321aef1d28fc3089b6/1573589929183-47S3EM4IWN5R1X76S5BJ/IMG_0615.JPG",
+    "caption": "Giving Back",
+    "aspect": "square"
+  },
+  {
+    "url": "https://images.squarespace-cdn.com/content/v1/5b8ed3321aef1d28fc3089b6/1573590021917-2PW94IJQYHEUZZPD8W6V/IMG_0621.JPG",
+    "caption": "Special Event",
+    "aspect": "wide"
+  },
+  {
+    "url": "https://images.squarespace-cdn.com/content/v1/5b8ed3321aef1d28fc3089b6/1573590043478-CA941QXY3IFMM1PMDRIT/IMG_0623.JPG",
+    "caption": "K4AC Volunteers",
+    "aspect": "tall"
+  },
+  {
+    "url": "https://images.squarespace-cdn.com/content/v1/5b8ed3321aef1d28fc3089b6/1573590049819-AEAV8YS2O9WGQ0PO1Z2I/IMG_0625.JPG",
+    "caption": "Community Joy",
+    "aspect": "square"
+  },
+  {
+    "url": "https://images.squarespace-cdn.com/content/v1/5b8ed3321aef1d28fc3089b6/1573590075463-78U2MDUHEMH8GCNPT1TS/IMG_0629.JPG",
+    "caption": "Holiday Gathering",
+    "aspect": "wide"
+  },
+  {
+    "url": "https://images.squarespace-cdn.com/content/v1/5b8ed3321aef1d28fc3089b6/1573590091213-MTMFO2T44AUD7UR85JC6/IMG_0630.JPG",
+    "caption": "Celebrating Support",
+    "aspect": "tall"
+  },
+  {
+    "url": "https://images.squarespace-cdn.com/content/v1/5b8ed3321aef1d28fc3089b6/1573590102068-B0LK5MIU2SCEG0FBXUQX/IMG_0631.JPG",
+    "caption": "Heart of K4AC",
+    "aspect": "wide"
+  },
+  {
+    "url": "https://images.squarespace-cdn.com/content/v1/5b8ed3321aef1d28fc3089b6/1573590115872-EP14BQOK1XVYPNXQK318/IMG_0632.JPG",
+    "caption": "Holiday Cheer Event",
+    "aspect": "wide"
+  },
+  {
+    "url": "https://images.squarespace-cdn.com/content/v1/5b8ed3321aef1d28fc3089b6/1573590125018-P26JRLUG6B7Q7P1UB0S2/IMG_0633.JPG",
+    "caption": "Community Love",
+    "aspect": "square"
+  },
+  {
+    "url": "https://images.squarespace-cdn.com/content/v1/5b8ed3321aef1d28fc3089b6/1573590139425-0F2NQBFOVS8Y22GBKDN2/IMG_0634.JPG",
+    "caption": "Making a Difference",
+    "aspect": "square"
+  },
+  {
+    "url": "https://images.squarespace-cdn.com/content/v1/5b8ed3321aef1d28fc3089b6/1573590180143-3O81QNZIDUA2PCG0GYV2/IMG_0637.JPG",
+    "caption": "Special Celebration",
+    "aspect": "wide"
+  },
+  {
+    "url": "https://images.squarespace-cdn.com/content/v1/5b8ed3321aef1d28fc3089b6/1573590275856-B4QV2LIHTMNY5RVZH36N/IMG_0643.JPG",
+    "caption": "K4AC Memory",
+    "aspect": "tall"
+  },
+  {
+    "url": "https://images.squarespace-cdn.com/content/v1/5b8ed3321aef1d28fc3089b6/1573590332071-3WBEJ4AJ2T6BAMYP16SB/IMG_0647.JPG",
+    "caption": "Holiday Spirit",
+    "aspect": "square"
+  },
+  {
+    "url": "https://images.squarespace-cdn.com/content/v1/5b8ed3321aef1d28fc3089b6/1573590356203-W5GC14XLFCGV59CCIZOX/IMG_0649.JPG",
+    "caption": "Giving and Sharing",
+    "aspect": "square"
+  },
+  {
+    "url": "https://images.squarespace-cdn.com/content/v1/5b8ed3321aef1d28fc3089b6/1573590430686-FDRU67BWLREYF4SJKJ9I/IMG_0658.JPG",
+    "caption": "Community Gathering",
+    "aspect": "wide"
+  },
+  {
+    "url": "https://images.squarespace-cdn.com/content/v1/5b8ed3321aef1d28fc3089b6/1573590482984-PP5RQVWTBSAOO4RILUU1/IMG_0662.JPG",
+    "caption": "Holiday Joy",
+    "aspect": "wide"
+  },
+  {
+    "url": "https://images.squarespace-cdn.com/content/v1/5b8ed3321aef1d28fc3089b6/1573590570755-2OV5G31LOPIRMNP2RL6Y/IMG_0669.JPG",
+    "caption": "Celebrating Life",
+    "aspect": "tall"
+  },
+  {
+    "url": "https://images.squarespace-cdn.com/content/v1/5b8ed3321aef1d28fc3089b6/1573590593151-FRJEY8SDSB7ZZ88SHRHS/IMG_0672.JPG",
+    "caption": "Support and Love",
+    "aspect": "tall"
+  },
+  {
+    "url": "https://images.squarespace-cdn.com/content/v1/5b8ed3321aef1d28fc3089b6/1573590682049-AZ7TWVSZXNE7NY37Z1T3/IMG_0679.JPG",
+    "caption": "Holiday Magic",
+    "aspect": "tall"
+  },
+  {
+    "url": "https://images.squarespace-cdn.com/content/v1/5b8ed3321aef1d28fc3089b6/1573590706654-TM3S7O8G49FCO30DFPQJ/IMG_0681.JPG",
+    "caption": "Making a Difference",
+    "aspect": "square"
+  },
+  {
+    "url": "https://images.squarespace-cdn.com/content/v1/5b8ed3321aef1d28fc3089b6/1573590730019-NQ58UKRL4KRDM42193PO/IMG_0683.JPG",
+    "caption": "Community Support",
+    "aspect": "wide"
+  },
+  {
+    "url": "https://images.squarespace-cdn.com/content/v1/5b8ed3321aef1d28fc3089b6/1573590736658-4P5ZOW25PSUZSZK6VGWL/IMG_0684.JPG",
+    "caption": "Holiday Cheer",
+    "aspect": "square"
+  },
+  {
+    "url": "https://images.squarespace-cdn.com/content/v1/5b8ed3321aef1d28fc3089b6/1573590755542-47SMMV6CIORZRF5N2FOB/IMG_0685.JPG",
+    "caption": "Spreading Smiles",
+    "aspect": "tall"
+  },
+  {
+    "url": "https://images.squarespace-cdn.com/content/v1/5b8ed3321aef1d28fc3089b6/1573590789207-9BYRUW53JNCOO3P5H3X3/IMG_0688.JPG",
+    "caption": "Special Moments",
+    "aspect": "square"
+  },
+  {
+    "url": "https://images.squarespace-cdn.com/content/v1/5b8ed3321aef1d28fc3089b6/1573590848878-2A7C1EM7E5XS7412VIJC/IMG_0693.JPG",
+    "caption": "Heart of the Community",
+    "aspect": "wide"
+  },
+  {
+    "url": "https://images.squarespace-cdn.com/content/v1/5b8ed3321aef1d28fc3089b6/1573590875678-Y3CXYL3LNUBKY1ZYUIHH/IMG_0695.JPG",
+    "caption": "Holiday Joy Event",
+    "aspect": "wide"
+  },
+  {
+    "url": "https://images.squarespace-cdn.com/content/v1/5b8ed3321aef1d28fc3089b6/1573590881900-FZJNZ23QG8SSCR68FZ67/IMG_0696.JPG",
+    "caption": "Celebrating Success",
+    "aspect": "wide"
+  },
+  {
+    "url": "https://images.squarespace-cdn.com/content/v1/5b8ed3321aef1d28fc3089b6/1573590986408-95MSEYWXWLYCXXWUVXX8/IMG_0705.JPG",
+    "caption": "K4AC Spirit",
+    "aspect": "square"
+  },
+  {
+    "url": "https://images.squarespace-cdn.com/content/v1/5b8ed3321aef1d28fc3089b6/1573591012691-S04HR3Z82PEZI5YTFSPH/IMG_0708.JPG",
+    "caption": "Giving Back Together",
+    "aspect": "wide"
+  },
+  {
+    "url": "https://images.squarespace-cdn.com/content/v1/5b8ed3321aef1d28fc3089b6/1573591140527-XJYGNRQIAU7O9Z4J8YLT/IMG_0718.JPG",
+    "caption": "Holiday Magic Memory",
+    "aspect": "square"
+  },
+  {
+    "url": "https://images.squarespace-cdn.com/content/v1/5b8ed3321aef1d28fc3089b6/1573591142110-DCLE4OHD7RUNM53TCXFK/IMG_0717.JPG",
+    "caption": "Community Impact",
+    "aspect": "wide"
+  },
+  {
+    "url": "https://images.squarespace-cdn.com/content/v1/5b8ed3321aef1d28fc3089b6/1573591194607-ELL7A12M4K46WLFRB7F3/IMG_0722.JPG",
+    "caption": "Celebrating Life",
+    "aspect": "wide"
+  },
+  {
+    "url": "https://images.squarespace-cdn.com/content/v1/5b8ed3321aef1d28fc3089b6/1573591217075-B2SKKA1HXHHEWCIL2XXS/IMG_0723.JPG",
+    "caption": "Supportive Community",
+    "aspect": "tall"
+  },
+  {
+    "url": "https://images.squarespace-cdn.com/content/v1/5b8ed3321aef1d28fc3089b6/1573591217363-GOEB59N8ATWBWM744H3Q/IMG_0724.JPG",
+    "caption": "K4AC Family Joy",
+    "aspect": "square"
+  },
+  {
+    "url": "https://images.squarespace-cdn.com/content/v1/5b8ed3321aef1d28fc3089b6/1573591247851-C8B9MBMHK0S6NZ76AVIE/IMG_0726.JPG",
+    "caption": "Holiday Cheer 2023",
+    "aspect": "tall"
+  },
+  {
+    "url": "https://images.squarespace-cdn.com/content/v1/5b8ed3321aef1d28fc3089b6/1573591303317-UWWUUJI2TGTZNKRW01G9/IMG_0729.JPG",
+    "caption": "Making a Difference",
+    "aspect": "square"
+  },
+  {
+    "url": "https://images.squarespace-cdn.com/content/v1/5b8ed3321aef1d28fc3089b6/1573591399330-ZZUGB9A9ZNMMC1ERCWDK/IMG_0736.JPG",
+    "caption": "Community Love",
+    "aspect": "square"
+  },
+  {
+    "url": "https://images.squarespace-cdn.com/content/v1/5b8ed3321aef1d28fc3089b6/1573591426282-RBLSXII21XM4WF0VTGYX/IMG_0738.JPG",
+    "caption": "Special Celebration",
+    "aspect": "tall"
+  },
+  {
+    "url": "https://images.squarespace-cdn.com/content/v1/5b8ed3321aef1d28fc3089b6/1573591450989-2KA129NLGXLVBKGURDYF/IMG_0740.JPG",
+    "caption": "Holiday Spirit",
+    "aspect": "wide"
+  },
+  {
+    "url": "https://images.squarespace-cdn.com/content/v1/5b8ed3321aef1d28fc3089b6/1573591465852-5K5V8I75J6A3BAYQZFU3/IMG_0741.JPG",
+    "caption": "Giving Back",
+    "aspect": "wide"
+  },
+  {
+    "url": "https://images.squarespace-cdn.com/content/v1/5b8ed3321aef1d28fc3089b6/1573591496573-TNMJBC2GMAMAL02UXLTE/IMG_0743.JPG",
+    "caption": "Making Memories",
+    "aspect": "square"
+  },
+  {
+    "url": "https://images.squarespace-cdn.com/content/v1/5b8ed3321aef1d28fc3089b6/1573591522325-MS4NIGJWMG5QK8KTO9HJ/IMG_0745.JPG",
+    "caption": "Holiday Magic",
+    "aspect": "wide"
+  },
+  {
+    "url": "https://images.squarespace-cdn.com/content/v1/5b8ed3321aef1d28fc3089b6/1573591576345-UDDQ8XSAGBUWAXRDFX0H/IMG_0748.JPG",
+    "caption": "Heart of K4AC",
+    "aspect": "square"
+  },
+  {
+    "url": "https://images.squarespace-cdn.com/content/v1/5b8ed3321aef1d28fc3089b6/1573591584209-TKQZ8YNDPTD131NBD3M1/InkedIMG_0706_LI.jpg",
+    "caption": "Celebrating Joy",
+    "aspect": "square"
+  },
+  {
+    "url": "https://images.squarespace-cdn.com/content/v1/5b8ed3321aef1d28fc3089b6/1590080481553-YECY9TTZJV4F72TX8XXS/7.jpg",
+    "caption": "Operation Holiday Cheer",
+    "aspect": "wide"
+  },
+  {
+    "url": "https://images.squarespace-cdn.com/content/v1/5b8ed3321aef1d28fc3089b6/1590080481828-IFW2H3NE045CSE0IKLAF/6.jpg",
+    "caption": "Volunteer Support",
+    "aspect": "wide"
+  },
+  {
+    "url": "https://images.squarespace-cdn.com/content/v1/5b8ed3321aef1d28fc3089b6/1590080483627-5FT2OBJ7PUVNC9C5XX4R/toys.jpg",
+    "caption": "Gifts for Children",
+    "aspect": "wide"
+  },
+  {
+    "url": "https://images.squarespace-cdn.com/content/v1/5b8ed3321aef1d28fc3089b6/1590080483765-7Z6K30HPGB4W8HXDH9KP/toys3.jpg",
+    "caption": "Fulfilling Wishes",
+    "aspect": "square"
+  },
+  {
+    "url": "https://images.squarespace-cdn.com/content/v1/5b8ed3321aef1d28fc3089b6/1590080485619-VQQ1V9CJAX1XUJ1FGYWT/toyus2.jpg",
+    "caption": "Spreading Smiles",
+    "aspect": "tall"
+  },
+  {
+    "url": "https://images.squarespace-cdn.com/content/v1/5b8ed3321aef1d28fc3089b6/1769021397793-8WMXSUHACCBCTPXB51YR/IMG_5974.jpg",
+    "caption": "Community Memories",
+    "aspect": "tall"
+  }
 ];
 ---
 
@@ -69,23 +466,16 @@ const photos = [
             @mouseenter="hovered = true"
             @mouseleave="hovered = false"
           >
-            <!-- Placeholder image tile -->
-            <div
-              class={`w-full flex items-center justify-center bg-gradient-to-br ${
-                index % 4 === 0 ? 'from-neutral-300 to-neutral-400' :
-                index % 4 === 1 ? 'from-neutral-200 to-neutral-300' :
-                index % 4 === 2 ? 'from-neutral-300 to-neutral-200' :
-                'from-neutral-400 to-neutral-300'
-              } ${
-                photo.aspect === 'tall' ? 'h-72' :
-                photo.aspect === 'wide' ? 'h-44' : 'h-56'
+            <!-- Real image -->
+            <img
+              src={photo.url}
+              alt={photo.caption}
+              class={`w-full object-cover transition-transform duration-500 group-hover:scale-110 ${
+                photo.aspect === 'tall' ? 'aspect-[3/4]' :
+                photo.aspect === 'wide' ? 'aspect-[16/9]' : 'aspect-square'
               }`}
-            >
-              <div class="text-center p-6">
-                <Icon name="mdi:image-outline" class="w-12 h-12 text-neutral-400 mx-auto mb-2" />
-                <p class="text-neutral-500 text-xs">Photo Coming Soon</p>
-              </div>
-            </div>
+              loading="lazy"
+            />
 
             <!-- Caption overlay -->
             <div
