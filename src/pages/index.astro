@@ -20,21 +20,46 @@ import { Icon } from 'astro-icon/components';
     </div>
 
     <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32 lg:py-40">
-      <div class="max-w-3xl">
-        <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 mb-6">
-          <Icon name="mdi:heart" class="w-4 h-4 text-brand-gold-light" />
-          <span class="text-sm font-medium text-white/90">501(c)(3) Nonprofit · Davie, FL</span>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div class="max-w-3xl">
+          <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 mb-6">
+            <Icon name="mdi:heart" class="w-4 h-4 text-brand-gold-light" />
+            <span class="text-sm font-medium text-white/90">501(c)(3) Nonprofit · Davie, FL</span>
+          </div>
+          <h1 class="font-display font-bold text-4xl sm:text-5xl lg:text-6xl leading-tight mb-6">
+            For Those We Love,<br />
+            <span class="text-brand-gold-light">For Those We've Lost</span>
+          </h1>
+          <p class="text-lg sm:text-xl text-white/85 leading-relaxed mb-10 max-w-2xl">
+            Kidz 4 A Cure brings the magic of the holidays to children affected by HIV/AIDS and under-resourced families across South Florida — one personal gift wish at a time.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4">
+            <DonateButton href="/donate" label="Sponsor a Child" variant="gold" size="lg" />
+            <DonateButton href="/mission" label="Learn More" variant="outline" size="lg" />
+          </div>
         </div>
-        <h1 class="font-display font-bold text-4xl sm:text-5xl lg:text-6xl leading-tight mb-6">
-          For Those We Love,<br />
-          <span class="text-brand-gold-light">For Those We've Lost</span>
-        </h1>
-        <p class="text-lg sm:text-xl text-white/85 leading-relaxed mb-10 max-w-2xl">
-          Kidz 4 A Cure brings the magic of the holidays to children affected by HIV/AIDS and under-resourced families across South Florida — one personal gift wish at a time.
-        </p>
-        <div class="flex flex-col sm:flex-row gap-4">
-          <DonateButton href="/donate" label="Sponsor a Child" variant="gold" size="lg" />
-          <DonateButton href="/mission" label="Learn More" variant="outline" size="lg" />
+
+        <!-- Hero Image -->
+        <div class="relative group hidden lg:block">
+          <div class="absolute -inset-4 bg-brand-gold/20 blur-2xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+          <div class="relative">
+            <img
+              src="https://images.squarespace-cdn.com/content/v1/5b8ed3321aef1d28fc3089b6/1573590043478-CA941QXY3IFMM1PMDRIT/IMG_0623.JPG"
+              alt="Volunteers with gifts"
+              class="rounded-3xl shadow-2xl rotate-2 group-hover:rotate-0 transition-transform duration-500 w-full object-cover aspect-[4/3] border-4 border-white/20"
+            />
+            <div class="absolute -bottom-6 -left-6 bg-white p-4 rounded-2xl shadow-xl -rotate-3 group-hover:rotate-0 transition-transform duration-500 hidden xl:block">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 bg-brand-red/10 rounded-full flex items-center justify-center">
+                  <Icon name="mdi:gift" class="w-5 h-5 text-brand-red" />
+                </div>
+                <div>
+                  <div class="text-neutral-900 font-bold text-sm">Operation: Holiday Cheer</div>
+                  <div class="text-neutral-500 text-xs">Making wishes come true</div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
