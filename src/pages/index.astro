@@ -1,0 +1,233 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import DonateButton from '../components/DonateButton.astro';
+import StatCard from '../components/StatCard.astro';
+import SectionHeader from '../components/SectionHeader.astro';
+import { Icon } from 'astro-icon/components';
+---
+
+<BaseLayout
+  title="Home"
+  description="Kidz 4 A Cure fulfills holiday gift wishes for children affected by HIV/AIDS and under-resourced families in South Florida. Sponsor a child today."
+>
+
+  <!-- Hero Section -->
+  <section class="relative bg-gradient-to-br from-brand-red-dark via-brand-red to-red-700 text-white overflow-hidden">
+    <div class="absolute inset-0 opacity-10">
+      <div class="absolute top-10 left-10 w-32 h-32 rounded-full bg-brand-gold blur-3xl"></div>
+      <div class="absolute bottom-20 right-20 w-48 h-48 rounded-full bg-white blur-3xl"></div>
+      <div class="absolute top-1/2 left-1/3 w-24 h-24 rounded-full bg-brand-gold blur-2xl"></div>
+    </div>
+
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32 lg:py-40">
+      <div class="max-w-3xl">
+        <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 mb-6">
+          <Icon name="mdi:heart" class="w-4 h-4 text-brand-gold-light" />
+          <span class="text-sm font-medium text-white/90">501(c)(3) Nonprofit · Davie, FL</span>
+        </div>
+        <h1 class="font-display font-bold text-4xl sm:text-5xl lg:text-6xl leading-tight mb-6">
+          For Those We Love,<br />
+          <span class="text-brand-gold-light">For Those We've Lost</span>
+        </h1>
+        <p class="text-lg sm:text-xl text-white/85 leading-relaxed mb-10 max-w-2xl">
+          Kidz 4 A Cure brings the magic of the holidays to children affected by HIV/AIDS and under-resourced families across South Florida — one personal gift wish at a time.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4">
+          <DonateButton href="/donate" label="Sponsor a Child" variant="gold" size="lg" />
+          <DonateButton href="/mission" label="Learn More" variant="outline" size="lg" />
+        </div>
+      </div>
+    </div>
+
+    <!-- Decorative wave -->
+    <div class="absolute bottom-0 left-0 right-0">
+      <svg viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" class="w-full h-12">
+        <path d="M0,30 C360,60 1080,0 1440,30 L1440,60 L0,60 Z" fill="white"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- Stats Bar -->
+  <section class="bg-white py-12 border-b border-neutral-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 divide-y sm:divide-y-0 sm:divide-x divide-neutral-200">
+        <StatCard value="20+" label="Years Serving Our Community" />
+        <StatCard value="200+" label="Children Impacted Annually" />
+        <StatCard value="$10K+" label="Raised for AIDS Research" />
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section class="bg-brand-cream py-20 sm:py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <SectionHeader
+        title="How Sponsorship Works"
+        subtitle="Three simple steps that make a lasting difference in a child's life."
+      />
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-4">
+        <!-- Step 1 -->
+        <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow text-center group">
+          <div class="w-16 h-16 bg-brand-red/10 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-brand-red/20 transition-colors">
+            <Icon name="mdi:pencil-box-outline" class="w-8 h-8 text-brand-red" />
+          </div>
+          <div class="font-display font-bold text-5xl text-brand-gold mb-4">1</div>
+          <h3 class="font-display font-bold text-xl text-neutral-900 mb-3">A Child Submits Two Wishes</h3>
+          <p class="text-neutral-600 leading-relaxed">
+            Each child shares two personal holiday wishes — real, heartfelt requests that reflect who they are and what brings them joy.
+          </p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow text-center group">
+          <div class="w-16 h-16 bg-brand-gold/10 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-brand-gold/20 transition-colors">
+            <Icon name="mdi:account-heart-outline" class="w-8 h-8 text-brand-gold" />
+          </div>
+          <div class="font-display font-bold text-5xl text-brand-gold mb-4">2</div>
+          <h3 class="font-display font-bold text-xl text-neutral-900 mb-3">You Become Their Sponsor</h3>
+          <p class="text-neutral-600 leading-relaxed">
+            Donors like you are matched with a child and fulfill their wishes — plus a new outfit for the holiday season.
+          </p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow text-center group">
+          <div class="w-16 h-16 bg-brand-red/10 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-brand-red/20 transition-colors">
+            <Icon name="mdi:gift-outline" class="w-8 h-8 text-brand-red" />
+          </div>
+          <div class="font-display font-bold text-5xl text-brand-gold mb-4">3</div>
+          <h3 class="font-display font-bold text-xl text-neutral-900 mb-3">A Child Receives Joy</h3>
+          <p class="text-neutral-600 leading-relaxed">
+            On the day of Operation: Holiday Cheer, every child receives their gifts, their outfit, and the feeling of being truly seen.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why It Matters / Pull Quote -->
+  <section class="bg-brand-red py-20 sm:py-24 relative overflow-hidden">
+    <div class="absolute inset-0 opacity-5">
+      <Icon name="mdi:heart" class="absolute -top-10 -left-10 w-64 h-64 text-white" />
+      <Icon name="mdi:heart" class="absolute -bottom-10 -right-10 w-64 h-64 text-white" />
+    </div>
+    <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <Icon name="mdi:format-quote-open" class="w-12 h-12 text-brand-gold-light mx-auto mb-6 opacity-80" />
+      <blockquote class="font-display font-bold text-3xl sm:text-4xl lg:text-5xl text-white leading-tight">
+        You are seen.<br />
+        You are valued.<br />
+        <span class="text-brand-gold-light">You matter.</span>
+      </blockquote>
+      <p class="mt-8 text-white/75 text-lg max-w-xl mx-auto leading-relaxed">
+        Every child who receives a gift through Operation: Holiday Cheer knows they haven't been forgotten — that someone out there cares deeply about them.
+      </p>
+      <div class="mt-10">
+        <DonateButton href="/mission" label="Read Our Mission" variant="outline" size="lg" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Donation Tiers -->
+  <section class="bg-white py-20 sm:py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <SectionHeader
+        title="Every Dollar Makes a Difference"
+        subtitle="Choose how you'd like to show a child they're remembered this holiday season."
+      />
+
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-4">
+        <!-- $25 Tier -->
+        <div class="border-2 border-neutral-200 rounded-2xl p-8 hover:border-brand-gold hover:shadow-md transition-all group">
+          <div class="font-display font-bold text-4xl text-neutral-900 mb-2">$25</div>
+          <div class="text-brand-gold font-semibold text-sm mb-4 uppercase tracking-wider">Gift Contribution</div>
+          <p class="text-neutral-600 leading-relaxed mb-6">
+            Contributes to fulfilling a child's personal holiday wish. Every gift makes the holiday season feel special.
+          </p>
+          <DonateButton href="/donate" label="Give $25" variant="secondary" size="sm" />
+        </div>
+
+        <!-- $50 Tier -->
+        <div class="border-2 border-brand-red rounded-2xl p-8 shadow-md relative">
+          <div class="absolute -top-3 left-1/2 -translate-x-1/2">
+            <span class="bg-brand-red text-white text-xs font-bold px-4 py-1 rounded-full uppercase tracking-wider">Most Popular</span>
+          </div>
+          <div class="font-display font-bold text-4xl text-neutral-900 mb-2">$50</div>
+          <div class="text-brand-red font-semibold text-sm mb-4 uppercase tracking-wider">Full Sponsorship</div>
+          <p class="text-neutral-600 leading-relaxed mb-6">
+            Fully sponsors one child — covering both holiday wishes, a new outfit, and extra surprises on the big day.
+          </p>
+          <DonateButton href="/donate" label="Sponsor a Child" variant="primary" size="sm" />
+        </div>
+
+        <!-- $100 Tier -->
+        <div class="border-2 border-neutral-200 rounded-2xl p-8 hover:border-brand-gold hover:shadow-md transition-all group">
+          <div class="font-display font-bold text-4xl text-neutral-900 mb-2">$100+</div>
+          <div class="text-brand-gold font-semibold text-sm mb-4 uppercase tracking-wider">Family Champion</div>
+          <p class="text-neutral-600 leading-relaxed mb-6">
+            Sponsors an entire family or multiple children, ensuring every sibling feels equally loved and celebrated.
+          </p>
+          <DonateButton href="/donate" label="Champion a Family" variant="gold" size="sm" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Volunteer / Sponsor CTA -->
+  <section class="bg-neutral-900 py-20 sm:py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <SectionHeader
+            title="Join Our Community of Changemakers"
+            subtitle="Whether you give your time, your treasure, or your talent — there's a place for you in the Kidz 4 A Cure family."
+            align="left"
+            light={true}
+          />
+          <div class="flex flex-col sm:flex-row gap-4 mt-8">
+            <DonateButton href="/get-involved" label="Volunteer With Us" variant="gold" size="md" />
+            <DonateButton href="/donate" label="Donate Now" variant="outline" size="md" />
+          </div>
+        </div>
+
+        <div class="grid grid-cols-2 gap-4">
+          <div class="bg-white/5 rounded-2xl p-6 text-center">
+            <Icon name="mdi:hand-heart-outline" class="w-10 h-10 text-brand-gold-light mx-auto mb-3" />
+            <div class="font-display font-bold text-white text-lg">Volunteer</div>
+            <p class="text-neutral-400 text-sm mt-1">No special skills needed — just a heart full of love.</p>
+          </div>
+          <div class="bg-white/5 rounded-2xl p-6 text-center">
+            <Icon name="mdi:gift-outline" class="w-10 h-10 text-brand-gold-light mx-auto mb-3" />
+            <div class="font-display font-bold text-white text-lg">Sponsor</div>
+            <p class="text-neutral-400 text-sm mt-1">Fulfill a child's personal holiday wish.</p>
+          </div>
+          <div class="bg-white/5 rounded-2xl p-6 text-center">
+            <Icon name="mdi:domain" class="w-10 h-10 text-brand-gold-light mx-auto mb-3" />
+            <div class="font-display font-bold text-white text-lg">Business</div>
+            <p class="text-neutral-400 text-sm mt-1">Partner with us and make a community impact.</p>
+          </div>
+          <div class="bg-white/5 rounded-2xl p-6 text-center">
+            <Icon name="mdi:share-variant-outline" class="w-10 h-10 text-brand-gold-light mx-auto mb-3" />
+            <div class="font-display font-bold text-white text-lg">Spread the Word</div>
+            <p class="text-neutral-400 text-sm mt-1">Share our mission with your community.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer CTA -->
+  <section class="bg-brand-gold-pale py-16">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <Icon name="mdi:star-outline" class="w-10 h-10 text-brand-gold mx-auto mb-4" />
+      <h2 class="font-display font-bold text-3xl sm:text-4xl text-neutral-900 mb-4">
+        Ready to Make a Child's Holiday?
+      </h2>
+      <p class="text-neutral-700 text-lg leading-relaxed mb-8">
+        Your donation directly fulfills a personal wish for a child who needs to know they are loved. This holiday season, give the gift of being remembered.
+      </p>
+      <DonateButton href="/donate" label="Donate Now" variant="primary" size="lg" />
+    </div>
+  </section>
+
+</BaseLayout>

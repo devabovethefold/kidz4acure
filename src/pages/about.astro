@@ -1,0 +1,199 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import DonateButton from '../components/DonateButton.astro';
+import SectionHeader from '../components/SectionHeader.astro';
+import { Icon } from 'astro-icon/components';
+---
+
+<BaseLayout
+  title="About Us"
+  description="Learn about the founding story of Kidz 4 A Cure, founded in honor of Kimberly Johnson, and our journey from AIDS Walk team to 501(c)(3) nonprofit."
+>
+
+  <!-- Page Hero -->
+  <section class="bg-gradient-to-br from-brand-red-dark to-brand-red py-20 sm:py-24 text-white relative overflow-hidden">
+    <div class="absolute inset-0 opacity-10">
+      <div class="absolute top-0 left-0 w-64 h-64 rounded-full bg-brand-gold blur-3xl"></div>
+    </div>
+    <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div class="inline-flex items-center gap-2 bg-white/10 rounded-full px-4 py-2 mb-6">
+        <Icon name="mdi:account-heart-outline" class="w-4 h-4 text-brand-gold-light" />
+        <span class="text-sm text-white/90">Our Story</span>
+      </div>
+      <h1 class="font-display font-bold text-4xl sm:text-5xl lg:text-6xl leading-tight mb-6">
+        About Kidz 4 A Cure
+      </h1>
+      <p class="text-lg sm:text-xl text-white/85 leading-relaxed max-w-2xl mx-auto">
+        Born from love, loss, and an unwavering belief that every child deserves to feel celebrated.
+      </p>
+    </div>
+  </section>
+
+  <!-- Origin Story -->
+  <section class="bg-white py-20 sm:py-24">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <SectionHeader title="Where It All Began" subtitle="A story of love that refused to be silenced." />
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+        <div class="space-y-5 text-neutral-700 leading-relaxed">
+          <p class="text-lg">
+            Kidz 4 A Cure began not in a boardroom, but in a heart broken open by grief and held together by love.
+          </p>
+          <p>
+            In 2002, <strong class="text-neutral-900">Lorraine Cram</strong> founded a walk team to participate in the annual AIDS Walk — a simple act of solidarity in honor of her adopted daughter, <strong class="text-neutral-900">Kimberly Johnson</strong>, who had lost her battle to HIV/AIDS in 2000 at just eight years old.
+          </p>
+          <p>
+            Kimberly's story was brief, but her spirit was enormous. She deserved more years, more holidays, more mornings. Lorraine channeled that grief into action — and Kidz 4 A Cure became her way of making sure other children like Kimberly would feel seen, valued, and celebrated.
+          </p>
+          <p>
+            In 2010, Lorraine added her second adopted daughter, <strong class="text-neutral-900">Ceyra</strong> — who also passed that same year — to the team's shirts. Their names travel with every step taken, every gift wrapped, every child celebrated.
+          </p>
+          <p>
+            What began as a walk team grew into a movement. In <strong class="text-neutral-900">2015</strong>, Kidz 4 A Cure was formally incorporated as a nonprofit organization — a testament to years of community trust, grassroots effort, and relentless love.
+          </p>
+        </div>
+
+        <!-- Timeline -->
+        <div class="relative">
+          <div class="absolute left-5 top-0 bottom-0 w-px bg-neutral-200"></div>
+          <div class="space-y-8">
+            {[
+              {
+                year: '2000',
+                title: 'Kimberly Johnson',
+                desc: 'Lorraine\'s adopted daughter Kimberly passes away at age 8, after her battle with HIV/AIDS. Her memory becomes the seed of something greater.',
+                color: 'bg-brand-red',
+              },
+              {
+                year: '2002',
+                title: 'The Walk Team is Born',
+                desc: 'Lorraine founds a team to participate in the AIDS Walk — a personal tribute that begins to grow into a community.',
+                color: 'bg-brand-gold',
+              },
+              {
+                year: '2010',
+                title: 'Ceyra Added to the Team',
+                desc: 'Lorraine\'s second adopted daughter Ceyra passes away. Her name joins Kimberly\'s on the team shirts, carried with every step.',
+                color: 'bg-brand-red',
+              },
+              {
+                year: '2015',
+                title: 'Officially Incorporated',
+                desc: 'Kidz 4 A Cure becomes a fully incorporated 501(c)(3) nonprofit, formalizing years of community-driven impact.',
+                color: 'bg-brand-gold',
+              },
+              {
+                year: 'Today',
+                title: 'Growing Every Year',
+                desc: 'Serving 200+ children annually, raising funds for AIDS research, and expanding Operation: Holiday Cheer each year.',
+                color: 'bg-brand-red',
+              },
+            ].map(item => (
+              <div class="flex gap-4 items-start">
+                <div class={`w-10 h-10 ${item.color} rounded-full flex items-center justify-center flex-shrink-0 z-10 text-white text-xs font-bold font-display`}>
+                  {item.year === 'Today' ? '✦' : item.year.slice(2)}
+                </div>
+                <div class="bg-neutral-50 rounded-xl p-4 flex-1">
+                  <div class="text-xs font-bold text-neutral-500 uppercase tracking-wider mb-1">{item.year}</div>
+                  <div class="font-display font-bold text-neutral-900 mb-1">{item.title}</div>
+                  <p class="text-neutral-600 text-sm leading-relaxed">{item.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- In Memoriam Callout -->
+  <section class="bg-neutral-100 py-16">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-white rounded-2xl p-8 sm:p-12 shadow-sm text-center">
+        <Icon name="mdi:candle" class="w-12 h-12 text-brand-gold mx-auto mb-6" />
+        <h2 class="font-display font-bold text-2xl sm:text-3xl text-neutral-900 mb-4">
+          In Loving Memory
+        </h2>
+        <p class="text-neutral-700 leading-relaxed max-w-xl mx-auto mb-3">
+          <strong>Kimberly Johnson</strong> — who lived eight years full of brightness and left a legacy that touches hundreds of lives every year.
+        </p>
+        <p class="text-neutral-700 leading-relaxed max-w-xl mx-auto mb-8">
+          <strong>Ceyra</strong> — whose name travels with us on every shirt, every walk, every celebration.
+        </p>
+        <p class="text-neutral-500 text-sm italic mb-8">
+          "For Those We Love, For Those We've Lost"
+        </p>
+        <a
+          href="/memoriam"
+          class="inline-flex items-center gap-2 text-brand-red font-semibold hover:text-brand-red-dark transition-colors"
+        >
+          Visit our In Memoriam page
+          <Icon name="mdi:arrow-right" class="w-4 h-4" />
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Team -->
+  <section class="bg-white py-20 sm:py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <SectionHeader
+        title="Our Team"
+        subtitle="Small but mighty — driven by passion and purpose."
+      />
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-4">
+        <!-- Lorraine -->
+        <div class="bg-neutral-50 rounded-2xl p-6 text-center">
+          <div class="w-24 h-24 bg-neutral-200 rounded-full mx-auto mb-4 flex items-center justify-center">
+            <Icon name="mdi:account-circle" class="w-16 h-16 text-neutral-400" />
+          </div>
+          <div class="font-display font-bold text-neutral-900 text-lg">Lorraine Cram</div>
+          <div class="text-brand-red text-sm font-medium mb-3">Founder & Executive Director</div>
+          <p class="text-neutral-600 text-sm leading-relaxed">
+            Founder of Kidz 4 A Cure and the driving heart behind Operation: Holiday Cheer. Lorraine's dedication to children and families in need is the soul of everything we do.
+          </p>
+        </div>
+
+        <!-- Placeholder Team Member 2 -->
+        <div class="bg-neutral-50 rounded-2xl p-6 text-center">
+          <div class="w-24 h-24 bg-neutral-200 rounded-full mx-auto mb-4 flex items-center justify-center">
+            <Icon name="mdi:account-circle" class="w-16 h-16 text-neutral-400" />
+          </div>
+          <div class="font-display font-bold text-neutral-900 text-lg">Team Member</div>
+          <div class="text-brand-red text-sm font-medium mb-3">Volunteer Coordinator</div>
+          <p class="text-neutral-600 text-sm leading-relaxed">
+            Photo and bio coming soon. Our team is small but deeply committed to our mission and community.
+          </p>
+        </div>
+
+        <!-- Join The Team CTA -->
+        <div class="bg-brand-red/5 border-2 border-dashed border-brand-red/30 rounded-2xl p-6 text-center flex flex-col items-center justify-center">
+          <Icon name="mdi:account-plus-outline" class="w-12 h-12 text-brand-red/60 mb-4" />
+          <div class="font-display font-bold text-neutral-700 text-lg mb-2">Join Our Team</div>
+          <p class="text-neutral-500 text-sm leading-relaxed mb-4">
+            Passionate about making a difference? We'd love to have you.
+          </p>
+          <DonateButton href="/get-involved" label="Get Involved" variant="secondary" size="sm" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="bg-brand-red py-16">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="font-display font-bold text-3xl sm:text-4xl text-white mb-4">
+        Be Part of the Story
+      </h2>
+      <p class="text-white/80 text-lg leading-relaxed mb-8">
+        Kimberly and Ceyra's legacies live on through every child we serve. Join us in honoring them by helping another child feel loved.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <DonateButton href="/donate" label="Donate Now" variant="gold" size="lg" />
+        <DonateButton href="/get-involved" label="Volunteer" variant="outline" size="lg" />
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

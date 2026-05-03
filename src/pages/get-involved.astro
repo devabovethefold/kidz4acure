@@ -1,0 +1,302 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import DonateButton from '../components/DonateButton.astro';
+import SectionHeader from '../components/SectionHeader.astro';
+import { Icon } from 'astro-icon/components';
+---
+
+<BaseLayout
+  title="Get Involved"
+  description="Volunteer, sponsor a child, or partner your business with Kidz 4 A Cure. There are many ways to make a difference for children affected by HIV/AIDS."
+>
+
+  <!-- Page Hero -->
+  <section class="bg-gradient-to-br from-brand-red-dark to-brand-red py-20 sm:py-24 text-white relative overflow-hidden">
+    <div class="absolute inset-0 opacity-10">
+      <div class="absolute top-0 right-0 w-64 h-64 rounded-full bg-brand-gold blur-3xl"></div>
+    </div>
+    <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div class="inline-flex items-center gap-2 bg-white/10 rounded-full px-4 py-2 mb-6">
+        <Icon name="mdi:hand-heart-outline" class="w-4 h-4 text-brand-gold-light" />
+        <span class="text-sm text-white/90">Join Our Community</span>
+      </div>
+      <h1 class="font-display font-bold text-4xl sm:text-5xl lg:text-6xl leading-tight mb-6">
+        Get Involved
+      </h1>
+      <p class="text-lg sm:text-xl text-white/85 leading-relaxed max-w-2xl mx-auto">
+        There's a place for you in the Kidz 4 A Cure family — whether you give your time, your heart, or your resources.
+      </p>
+    </div>
+  </section>
+
+  <!-- Volunteer Section -->
+  <section id="volunteer" class="bg-white py-20 sm:py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <div class="inline-flex items-center gap-2 bg-brand-red/10 rounded-full px-4 py-2 mb-6">
+            <Icon name="mdi:account-group-outline" class="w-4 h-4 text-brand-red" />
+            <span class="text-sm text-brand-red font-medium">Volunteer</span>
+          </div>
+          <h2 class="font-display font-bold text-3xl sm:text-4xl text-neutral-900 mb-5 leading-tight">
+            Lend Your Time & Heart
+          </h2>
+          <p class="text-neutral-700 leading-relaxed mb-5 text-lg">
+            Our volunteers are the backbone of Operation: Holiday Cheer. On event day and in the weeks leading up to it, there is always meaningful work to be done — and no special skills are required. Just show up with a willing heart.
+          </p>
+          <p class="text-neutral-700 leading-relaxed mb-8">
+            Volunteering with K4AC means working directly alongside our community to sort gifts, wrap packages, set up the event space, welcome families, and make sure every child's experience is magical.
+          </p>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+            {[
+              { icon: 'mdi:gift-outline', label: 'Gift wrapping & sorting' },
+              { icon: 'mdi:table-chair', label: 'Event setup & teardown' },
+              { icon: 'mdi:account-heart-outline', label: 'Family check-in' },
+              { icon: 'mdi:camera-outline', label: 'Photography & media' },
+              { icon: 'mdi:truck-delivery-outline', label: 'Donation pickup/delivery' },
+              { icon: 'mdi:bullhorn-outline', label: 'Community outreach' },
+            ].map(item => (
+              <div class="flex items-center gap-3 text-sm text-neutral-700">
+                <Icon name={item.icon} class="w-5 h-5 text-brand-red flex-shrink-0" />
+                {item.label}
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div class="bg-brand-cream rounded-2xl p-8 border border-brand-gold/20">
+          <h3 class="font-display font-bold text-xl text-neutral-900 mb-2">Ready to volunteer?</h3>
+          <p class="text-neutral-600 text-sm leading-relaxed mb-6">
+            Fill out the form below and let us know how you'd like to help. We'll be in touch with upcoming opportunities.
+          </p>
+          <div class="space-y-4">
+            <div>
+              <label class="block text-xs font-semibold text-neutral-700 uppercase tracking-wider mb-1.5">Full Name</label>
+              <input type="text" class="w-full border border-neutral-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brand-red focus:ring-1 focus:ring-brand-red" placeholder="Your name" />
+            </div>
+            <div>
+              <label class="block text-xs font-semibold text-neutral-700 uppercase tracking-wider mb-1.5">Email</label>
+              <input type="email" class="w-full border border-neutral-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brand-red focus:ring-1 focus:ring-brand-red" placeholder="your@email.com" />
+            </div>
+            <div>
+              <label class="block text-xs font-semibold text-neutral-700 uppercase tracking-wider mb-1.5">How Would You Like to Help?</label>
+              <input type="text" class="w-full border border-neutral-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brand-red focus:ring-1 focus:ring-brand-red" placeholder="e.g., Gift wrapping, event day help..." />
+            </div>
+            <a
+              href="mailto:kidz4acure1993@gmail.com?subject=Volunteer Interest"
+              class="block w-full bg-brand-red text-white text-center py-3 rounded-full font-semibold text-sm hover:bg-brand-red-dark transition-colors"
+            >
+              Send Volunteer Inquiry
+            </a>
+            <p class="text-xs text-neutral-500 text-center">
+              Or email us directly at <a href="mailto:kidz4acure1993@gmail.com" class="text-brand-red hover:underline">kidz4acure1993@gmail.com</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sponsor a Child -->
+  <section id="sponsor" class="bg-brand-cream py-20 sm:py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <SectionHeader
+        title="Sponsor a Child or Family"
+        subtitle="Make the holidays personal for a child who needs to know they're remembered."
+      />
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        {[
+          {
+            label: 'Individual',
+            icon: 'mdi:account-outline',
+            desc: 'Sponsor one child and fulfill their two personal holiday wishes, plus a new outfit.',
+            price: 'From $50',
+            color: 'border-brand-red',
+          },
+          {
+            label: 'Family',
+            icon: 'mdi:account-group-outline',
+            desc: 'Sponsor a sibling group or full family so every child in the household feels equally celebrated.',
+            price: 'From $100',
+            color: 'border-brand-gold',
+          },
+          {
+            label: 'Group',
+            icon: 'mdi:account-multiple-outline',
+            desc: 'Gather coworkers, friends, or a faith community to sponsor multiple children together.',
+            price: 'Custom',
+            color: 'border-brand-red',
+          },
+          {
+            label: 'Business',
+            icon: 'mdi:domain',
+            desc: 'Give your business a meaningful community impact — sponsor a child, family, or become an event partner.',
+            price: 'Custom',
+            color: 'border-brand-gold',
+          },
+        ].map(tier => (
+          <div class={`bg-white rounded-2xl p-6 border-2 ${tier.color} shadow-sm hover:shadow-md transition-shadow`}>
+            <div class="w-12 h-12 bg-brand-red/10 rounded-xl flex items-center justify-center mb-4">
+              <Icon name={tier.icon} class="w-6 h-6 text-brand-red" />
+            </div>
+            <div class="font-display font-bold text-neutral-900 text-lg mb-1">{tier.label}</div>
+            <div class="text-brand-red text-sm font-semibold mb-3">{tier.price}</div>
+            <p class="text-neutral-600 text-sm leading-relaxed mb-5">{tier.desc}</p>
+            <DonateButton href="/donate" label="Sponsor Now" variant="secondary" size="sm" />
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Business Partners -->
+  <section id="business" class="bg-white py-20 sm:py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div class="order-2 lg:order-1">
+          <div class="space-y-4">
+            {[
+              {
+                icon: 'mdi:gift-outline',
+                title: 'In-Kind Donations',
+                desc: 'Donate products, gift cards, or services that can be distributed to the children and families we serve.',
+              },
+              {
+                icon: 'mdi:currency-usd',
+                title: 'Financial Sponsorship',
+                desc: 'Underwrite part or all of an event, cover operational costs, or establish a named sponsorship tier.',
+              },
+              {
+                icon: 'mdi:megaphone-outline',
+                title: 'Cause Marketing',
+                desc: 'Partner with us on a campaign — pledge a percentage of sales or feature our mission to your customers.',
+              },
+              {
+                icon: 'mdi:account-group',
+                title: 'Team Volunteering',
+                desc: 'Bring your team to Operation: Holiday Cheer for a meaningful group volunteer experience.',
+              },
+            ].map(item => (
+              <div class="flex gap-4 items-start p-5 rounded-xl hover:bg-neutral-50 transition-colors">
+                <div class="w-10 h-10 bg-brand-gold/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <Icon name={item.icon} class="w-5 h-5 text-brand-gold" />
+                </div>
+                <div>
+                  <div class="font-display font-bold text-neutral-900 mb-1">{item.title}</div>
+                  <p class="text-neutral-600 text-sm leading-relaxed">{item.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div class="order-1 lg:order-2">
+          <div class="inline-flex items-center gap-2 bg-brand-gold/10 rounded-full px-4 py-2 mb-6">
+            <Icon name="mdi:domain" class="w-4 h-4 text-brand-gold" />
+            <span class="text-sm text-brand-gold font-medium">Business Partners</span>
+          </div>
+          <h2 class="font-display font-bold text-3xl sm:text-4xl text-neutral-900 mb-5 leading-tight">
+            Partner With Us
+          </h2>
+          <p class="text-neutral-700 leading-relaxed mb-5 text-lg">
+            Businesses of all sizes have a powerful opportunity to make a real difference in the lives of children and families in South Florida — while building genuine community connections.
+          </p>
+          <p class="text-neutral-700 leading-relaxed mb-8">
+            K4AC partnerships are flexible and meaningful. We work with you to find the right level of involvement that fits your organization's capacity and values.
+          </p>
+          <a
+            href="mailto:kidz4acure1993@gmail.com?subject=Business Partnership Inquiry"
+            class="inline-flex items-center gap-2 bg-brand-gold text-white font-semibold px-6 py-3 rounded-full hover:bg-amber-700 transition-colors"
+          >
+            <Icon name="mdi:email-outline" class="w-4 h-4" />
+            Inquire About Partnership
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Form -->
+  <section class="bg-neutral-900 py-20 sm:py-24">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-10">
+        <h2 class="font-display font-bold text-3xl sm:text-4xl text-white mb-4">Ready to Make a Difference?</h2>
+        <p class="text-neutral-400 text-lg leading-relaxed">
+          Tell us how you'd like to get involved and we'll connect with you shortly.
+        </p>
+      </div>
+
+      <form
+        action="mailto:kidz4acure1993@gmail.com"
+        method="POST"
+        enctype="text/plain"
+        class="bg-white/5 rounded-2xl p-8 space-y-5"
+      >
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+          <div>
+            <label class="block text-xs font-semibold text-neutral-300 uppercase tracking-wider mb-1.5" for="name">Full Name</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              required
+              class="w-full bg-white/10 border border-white/20 text-white placeholder-white/40 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brand-gold focus:ring-1 focus:ring-brand-gold"
+              placeholder="Your name"
+            />
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-neutral-300 uppercase tracking-wider mb-1.5" for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              class="w-full bg-white/10 border border-white/20 text-white placeholder-white/40 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brand-gold focus:ring-1 focus:ring-brand-gold"
+              placeholder="your@email.com"
+            />
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-xs font-semibold text-neutral-300 uppercase tracking-wider mb-1.5" for="involvement">How Would You Like to Help?</label>
+          <select
+            id="involvement"
+            name="involvement"
+            class="w-full bg-white/10 border border-white/20 text-white rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brand-gold focus:ring-1 focus:ring-brand-gold"
+          >
+            <option value="" class="text-neutral-900">Select an option</option>
+            <option value="volunteer" class="text-neutral-900">Volunteer</option>
+            <option value="sponsor" class="text-neutral-900">Sponsor a Child</option>
+            <option value="business" class="text-neutral-900">Business Partnership</option>
+            <option value="other" class="text-neutral-900">Other</option>
+          </select>
+        </div>
+
+        <div>
+          <label class="block text-xs font-semibold text-neutral-300 uppercase tracking-wider mb-1.5" for="message">Message</label>
+          <textarea
+            id="message"
+            name="message"
+            rows="4"
+            class="w-full bg-white/10 border border-white/20 text-white placeholder-white/40 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brand-gold focus:ring-1 focus:ring-brand-gold resize-none"
+            placeholder="Tell us more about how you'd like to get involved..."
+          ></textarea>
+        </div>
+
+        <button
+          type="submit"
+          class="w-full bg-brand-red text-white font-semibold py-3.5 rounded-full hover:bg-brand-red-dark transition-colors"
+        >
+          Send Message
+        </button>
+
+        <p class="text-neutral-500 text-xs text-center">
+          Or reach us directly at <a href="mailto:kidz4acure1993@gmail.com" class="text-brand-gold-light hover:underline">kidz4acure1993@gmail.com</a> · <a href="tel:7542449569" class="text-brand-gold-light hover:underline">754-244-9569</a>
+        </p>
+      </form>
+    </div>
+  </section>
+
+</BaseLayout>

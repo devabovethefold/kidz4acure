@@ -1,0 +1,163 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import DonateButton from '../components/DonateButton.astro';
+import SectionHeader from '../components/SectionHeader.astro';
+import { Icon } from 'astro-icon/components';
+---
+
+<BaseLayout
+  title="Our Mission"
+  description="Learn about Kidz 4 A Cure's mission to bring hope and joy to children affected by HIV/AIDS and under-resourced families through Operation: Holiday Cheer."
+>
+
+  <!-- Page Hero -->
+  <section class="bg-gradient-to-br from-brand-red-dark to-brand-red py-20 sm:py-24 text-white relative overflow-hidden">
+    <div class="absolute inset-0 opacity-10">
+      <div class="absolute top-0 right-0 w-64 h-64 rounded-full bg-brand-gold blur-3xl"></div>
+    </div>
+    <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div class="inline-flex items-center gap-2 bg-white/10 rounded-full px-4 py-2 mb-6">
+        <Icon name="mdi:heart-outline" class="w-4 h-4 text-brand-gold-light" />
+        <span class="text-sm text-white/90">Our Purpose</span>
+      </div>
+      <h1 class="font-display font-bold text-4xl sm:text-5xl lg:text-6xl leading-tight mb-6">
+        Our Mission
+      </h1>
+      <p class="text-lg sm:text-xl text-white/85 leading-relaxed max-w-2xl mx-auto">
+        Bringing hope, dignity, and the magic of the holidays to children who need it most.
+      </p>
+    </div>
+  </section>
+
+  <!-- Mission Statement -->
+  <section class="bg-white py-20 sm:py-24">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <div class="w-16 h-16 bg-brand-red/10 rounded-2xl flex items-center justify-center mx-auto mb-6">
+          <Icon name="mdi:heart" class="w-8 h-8 text-brand-red" />
+        </div>
+        <h2 class="font-display font-bold text-3xl sm:text-4xl text-neutral-900 mb-6">
+          Hope Is a Gift Worth Giving
+        </h2>
+        <div class="prose prose-lg max-w-none text-neutral-700 space-y-5 text-left sm:text-center">
+          <p class="leading-relaxed">
+            Kidz 4 A Cure is a 501(c)(3) nonprofit organization dedicated to bringing joy, dignity, and a sense of belonging to children affected by HIV/AIDS and families facing economic hardship in South Florida. We believe every child deserves to feel celebrated — especially during the holiday season.
+          </p>
+          <p class="leading-relaxed">
+            Our work is personal. It was born from love and loss, and every gift we give carries that intention: to remind a child that they are not invisible, not forgotten, and deeply, genuinely valued.
+          </p>
+        </div>
+      </div>
+
+      <!-- 501(c)(3) Callout -->
+      <div class="bg-brand-gold-pale border border-brand-gold/30 rounded-2xl p-6 flex items-start gap-4">
+        <div class="w-10 h-10 bg-brand-gold/20 rounded-xl flex items-center justify-center flex-shrink-0 mt-0.5">
+          <Icon name="mdi:check-decagram" class="w-6 h-6 text-brand-gold" />
+        </div>
+        <div>
+          <div class="font-display font-bold text-neutral-900 mb-1">Registered 501(c)(3) Nonprofit</div>
+          <p class="text-neutral-700 text-sm leading-relaxed">
+            Kidz 4 A Cure is a fully incorporated 501(c)(3) nonprofit organization. All donations are tax-deductible to the extent permitted by law. We are based in Davie, Florida and serve families throughout the South Florida region.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Operation Holiday Cheer -->
+  <section class="bg-brand-cream py-20 sm:py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <SectionHeader
+        title="Operation: Holiday Cheer"
+        subtitle="Our flagship program — where personal wishes become reality."
+      />
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+        <div class="space-y-6 text-neutral-700 leading-relaxed">
+          <p class="text-lg">
+            Operation: Holiday Cheer is not a generic toy drive. It's not a box of random items handed to a stranger. It is a <strong class="text-neutral-900">deeply personal</strong> experience designed to communicate something powerful to every child who participates:
+          </p>
+          <blockquote class="border-l-4 border-brand-red pl-6 py-2">
+            <p class="font-display font-bold text-xl text-brand-red italic">
+              "Someone out there knows your name, knows what you love, and thought of you specifically."
+            </p>
+          </blockquote>
+          <p>
+            Each year, we collect wish lists from children affected by HIV/AIDS and families navigating economic hardship. Every child submits <strong class="text-neutral-900">two personal wishes</strong> — items that reflect their individual personality, passions, and hopes.
+          </p>
+          <p>
+            Generous donors are then matched with a child and fulfill those exact wishes. But the experience doesn't stop there — each child also receives a <strong class="text-neutral-900">new holiday outfit</strong> and additional surprises on the day of the event.
+          </p>
+          <p>
+            The result is a celebration that feels less like charity and more like family — because that's exactly what it is.
+          </p>
+        </div>
+
+        <!-- How It Works Visual -->
+        <div class="space-y-4">
+          {[
+            {
+              icon: 'mdi:pencil-outline',
+              title: 'Personal Wishes',
+              desc: 'Every child submits two specific, personal holiday wishes — things they truly want and will treasure.',
+              color: 'bg-brand-red/10',
+              iconColor: 'text-brand-red',
+            },
+            {
+              icon: 'mdi:tshirt-crew-outline',
+              title: 'A New Outfit',
+              desc: 'Every participant receives a brand-new holiday outfit so they can feel their best on the big day.',
+              color: 'bg-brand-gold/10',
+              iconColor: 'text-brand-gold',
+            },
+            {
+              icon: 'mdi:star-outline',
+              title: 'Extra Surprises',
+              desc: 'We love to go above and beyond — additional gifts and surprises make the day even more magical.',
+              color: 'bg-brand-red/10',
+              iconColor: 'text-brand-red',
+            },
+            {
+              icon: 'mdi:hand-heart-outline',
+              title: 'A Donor Who Cares',
+              desc: 'Each child is matched with a real person who chose to sponsor them specifically — making the connection personal.',
+              color: 'bg-brand-gold/10',
+              iconColor: 'text-brand-gold',
+            },
+          ].map(item => (
+            <div class="bg-white rounded-xl p-5 flex items-start gap-4 shadow-sm">
+              <div class={`w-10 h-10 ${item.color} rounded-xl flex items-center justify-center flex-shrink-0`}>
+                <Icon name={item.icon} class={`w-5 h-5 ${item.iconColor}`} />
+              </div>
+              <div>
+                <div class="font-display font-bold text-neutral-900 mb-1">{item.title}</div>
+                <p class="text-neutral-600 text-sm leading-relaxed">{item.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Not Generic Section -->
+  <section class="bg-neutral-900 py-20 sm:py-24 text-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <Icon name="mdi:heart-multiple-outline" class="w-12 h-12 text-brand-gold-light mx-auto mb-6" />
+      <h2 class="font-display font-bold text-3xl sm:text-4xl mb-6 leading-tight">
+        This Is Not a Generic Donation
+      </h2>
+      <p class="text-white/80 text-lg leading-relaxed mb-8">
+        When you sponsor a child through Kidz 4 A Cure, you aren't writing a check to an abstract cause. You are fulfilling the specific, personal wish of a real child who has faced challenges no child should have to face. Your gift says: <em class="text-white">"I see you. I chose you. You matter."</em>
+      </p>
+      <p class="text-white/70 text-base leading-relaxed">
+        That kind of intentional generosity changes something in a child. It builds a foundation of self-worth that no amount of hardship can easily shake. And that — more than any toy or outfit — is the true gift of Operation: Holiday Cheer.
+      </p>
+      <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
+        <DonateButton href="/donate" label="Sponsor a Child Today" variant="gold" size="lg" />
+        <DonateButton href="/about" label="Our Story" variant="outline" size="lg" />
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

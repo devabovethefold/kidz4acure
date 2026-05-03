@@ -1,0 +1,106 @@
+---
+import { Icon } from 'astro-icon/components';
+---
+
+<footer class="bg-neutral-900 text-neutral-300">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+      <!-- Logo & Tagline -->
+      <div class="md:col-span-1">
+        <a href="/" class="flex items-center gap-2 mb-3 group">
+          <div class="w-8 h-8 rounded-full bg-brand-red flex items-center justify-center">
+            <Icon name="mdi:heart" class="w-4 h-4 text-white" />
+          </div>
+          <span class="font-display font-bold text-lg text-white">
+            Kidz <span class="text-brand-gold-light">4</span> A Cure
+          </span>
+        </a>
+        <p class="text-sm leading-relaxed text-neutral-400 italic">
+          "For Those We Love,<br />For Those We've Lost"
+        </p>
+        <p class="mt-3 text-xs text-neutral-500">
+          501(c)(3) Nonprofit Organization<br />
+          EIN available upon request
+        </p>
+      </div>
+
+      <!-- Navigation -->
+      <div>
+        <h3 class="font-display font-semibold text-white mb-4 text-sm uppercase tracking-wider">Navigate</h3>
+        <ul class="space-y-2 text-sm">
+          {[
+            { href: '/', label: 'Home' },
+            { href: '/mission', label: 'Our Mission' },
+            { href: '/about', label: 'About Us' },
+            { href: '/events', label: 'Events' },
+            { href: '/gallery', label: 'Gallery' },
+            { href: '/memoriam', label: 'In Memoriam' },
+          ].map(link => (
+            <li>
+              <a href={link.href} class="hover:text-brand-gold-light transition-colors">
+                {link.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <!-- Take Action -->
+      <div>
+        <h3 class="font-display font-semibold text-white mb-4 text-sm uppercase tracking-wider">Take Action</h3>
+        <ul class="space-y-2 text-sm">
+          <li>
+            <a href="/donate" class="hover:text-brand-gold-light transition-colors">Donate</a>
+          </li>
+          <li>
+            <a href="/get-involved" class="hover:text-brand-gold-light transition-colors">Volunteer</a>
+          </li>
+          <li>
+            <a href="/get-involved#sponsor" class="hover:text-brand-gold-light transition-colors">Sponsor a Child</a>
+          </li>
+          <li>
+            <a href="/get-involved#business" class="hover:text-brand-gold-light transition-colors">Business Partners</a>
+          </li>
+          <li>
+            <a href="/contact" class="hover:text-brand-gold-light transition-colors">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div>
+        <h3 class="font-display font-semibold text-white mb-4 text-sm uppercase tracking-wider">Contact</h3>
+        <ul class="space-y-3 text-sm">
+          <li class="flex items-start gap-2">
+            <Icon name="mdi:map-marker" class="w-4 h-4 text-brand-gold-light mt-0.5 flex-shrink-0" />
+            <span class="text-neutral-400">
+              6220 SW 38th Street<br />
+              Davie, FL 33314
+            </span>
+          </li>
+          <li class="flex items-center gap-2">
+            <Icon name="mdi:phone" class="w-4 h-4 text-brand-gold-light flex-shrink-0" />
+            <a href="tel:7542449569" class="hover:text-brand-gold-light transition-colors text-neutral-400">
+              754-244-9569
+            </a>
+          </li>
+          <li class="flex items-center gap-2">
+            <Icon name="mdi:email" class="w-4 h-4 text-brand-gold-light flex-shrink-0" />
+            <a href="mailto:kidz4acure1993@gmail.com" class="hover:text-brand-gold-light transition-colors text-neutral-400 break-all">
+              kidz4acure1993@gmail.com
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="mt-10 pt-8 border-t border-neutral-800 flex flex-col sm:flex-row justify-between items-center gap-4">
+      <p class="text-xs text-neutral-500 text-center sm:text-left">
+        Kidz 4 A Cure is a registered 501(c)(3) nonprofit organization. All donations are tax-deductible to the extent permitted by law.
+      </p>
+      <p class="text-xs text-neutral-600">
+        &copy; {new Date().getFullYear()} Kidz 4 A Cure. All rights reserved.
+      </p>
+    </div>
+  </div>
+</footer>

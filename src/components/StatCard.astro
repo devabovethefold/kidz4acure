@@ -1,0 +1,23 @@
+---
+interface Props {
+  value: string;
+  label: string;
+  icon?: string;
+}
+
+const { value, label, icon } = Astro.props;
+---
+
+<div class="text-center px-6 py-4">
+  {icon && (
+    <div class="w-12 h-12 bg-brand-red/10 rounded-full flex items-center justify-center mx-auto mb-3">
+      <span class="text-brand-red text-xl">{icon}</span>
+    </div>
+  )}
+  <div class="font-display font-bold text-3xl sm:text-4xl text-brand-red leading-none mb-1">
+    {value}
+  </div>
+  <div class="text-sm text-neutral-600 font-medium leading-tight">
+    {label}
+  </div>
+</div>

@@ -1,0 +1,190 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import DonateButton from '../components/DonateButton.astro';
+import SectionHeader from '../components/SectionHeader.astro';
+import { Icon } from 'astro-icon/components';
+---
+
+<BaseLayout
+  title="Events"
+  description="Join Kidz 4 A Cure at Operation: Holiday Cheer and other community events throughout the year. See upcoming and past events."
+>
+
+  <!-- Page Hero -->
+  <section class="bg-gradient-to-br from-brand-red-dark to-brand-red py-20 sm:py-24 text-white relative overflow-hidden">
+    <div class="absolute inset-0 opacity-10">
+      <div class="absolute bottom-0 right-0 w-64 h-64 rounded-full bg-brand-gold blur-3xl"></div>
+    </div>
+    <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div class="inline-flex items-center gap-2 bg-white/10 rounded-full px-4 py-2 mb-6">
+        <Icon name="mdi:calendar-heart" class="w-4 h-4 text-brand-gold-light" />
+        <span class="text-sm text-white/90">Events & Programs</span>
+      </div>
+      <h1 class="font-display font-bold text-4xl sm:text-5xl lg:text-6xl leading-tight mb-6">
+        Events
+      </h1>
+      <p class="text-lg sm:text-xl text-white/85 leading-relaxed max-w-2xl mx-auto">
+        Every year, we gather as a community to celebrate, support, and uplift the children and families we serve.
+      </p>
+    </div>
+  </section>
+
+  <!-- Flagship Event -->
+  <section class="bg-white py-20 sm:py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <SectionHeader
+        title="Operation: Holiday Cheer"
+        subtitle="Our annual flagship event — the heart of everything Kidz 4 A Cure does."
+      />
+
+      <div class="bg-gradient-to-br from-brand-red to-red-700 rounded-3xl overflow-hidden shadow-xl">
+        <div class="grid grid-cols-1 lg:grid-cols-2">
+          <!-- Info -->
+          <div class="p-8 sm:p-12 text-white">
+            <div class="inline-flex items-center gap-2 bg-white/10 rounded-full px-4 py-2 mb-6">
+              <Icon name="mdi:star" class="w-4 h-4 text-brand-gold-light" />
+              <span class="text-sm">Annual Event</span>
+            </div>
+            <h2 class="font-display font-bold text-3xl sm:text-4xl mb-4 leading-tight">
+              Operation: Holiday Cheer 2024
+            </h2>
+            <p class="text-white/80 leading-relaxed mb-8 text-lg">
+              Our most anticipated event of the year — where children receive their personal holiday wishes, new outfits, and the knowledge that someone out there thought of them specifically.
+            </p>
+
+            <div class="space-y-4 mb-8">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 bg-white/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <Icon name="mdi:calendar" class="w-5 h-5 text-brand-gold-light" />
+                </div>
+                <div>
+                  <div class="text-xs text-white/60 uppercase tracking-wider mb-0.5">Date</div>
+                  <div class="font-semibold">December 2024 — Date TBA</div>
+                </div>
+              </div>
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 bg-white/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <Icon name="mdi:map-marker" class="w-5 h-5 text-brand-gold-light" />
+                </div>
+                <div>
+                  <div class="text-xs text-white/60 uppercase tracking-wider mb-0.5">Location</div>
+                  <div class="font-semibold">Davie, FL — Location TBA</div>
+                </div>
+              </div>
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 bg-white/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <Icon name="mdi:account-group-outline" class="w-5 h-5 text-brand-gold-light" />
+                </div>
+                <div>
+                  <div class="text-xs text-white/60 uppercase tracking-wider mb-0.5">Who Attends</div>
+                  <div class="font-semibold">Children, Families, Volunteers & Sponsors</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex flex-col sm:flex-row gap-3">
+              <DonateButton href="/donate" label="Sponsor a Child" variant="gold" size="md" />
+              <DonateButton href="/get-involved" label="Volunteer" variant="outline" size="md" />
+            </div>
+          </div>
+
+          <!-- Stay Tuned Panel -->
+          <div class="bg-white/10 backdrop-blur-sm p-8 sm:p-12 flex flex-col items-center justify-center text-center">
+            <div class="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center mb-6">
+              <Icon name="mdi:bell-ring-outline" class="w-10 h-10 text-brand-gold-light" />
+            </div>
+            <h3 class="font-display font-bold text-2xl text-white mb-3">Stay Tuned!</h3>
+            <p class="text-white/75 leading-relaxed mb-6">
+              Event details for our next Operation: Holiday Cheer will be announced soon. Sign up to be notified when registration opens for families, volunteers, and sponsors.
+            </p>
+            <a
+              href="mailto:kidz4acure1993@gmail.com?subject=Event Updates - Keep Me Informed"
+              class="inline-flex items-center gap-2 bg-white text-brand-red font-semibold px-6 py-3 rounded-full hover:bg-brand-gold-pale transition-colors"
+            >
+              <Icon name="mdi:email-outline" class="w-4 h-4" />
+              Get Notified
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What to Expect -->
+  <section class="bg-brand-cream py-20 sm:py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <SectionHeader
+        title="What to Expect"
+        subtitle="A day full of joy, gratitude, and community spirit."
+      />
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        {[
+          { icon: 'mdi:gift-outline', title: 'Gift Distribution', desc: 'Children receive their pre-selected personal holiday wishes — gifts chosen just for them.' },
+          { icon: 'mdi:tshirt-crew-outline', title: 'Holiday Outfits', desc: 'Every child receives a brand-new outfit to wear for the holiday season.' },
+          { icon: 'mdi:food-variant', title: 'Food & Refreshments', desc: 'A community celebration with food, drinks, and holiday cheer for the whole family.' },
+          { icon: 'mdi:account-group', title: 'Community Connection', desc: 'Volunteers, donors, families, and community partners come together as one K4AC family.' },
+        ].map(item => (
+          <div class="bg-white rounded-2xl p-6 text-center shadow-sm hover:shadow-md transition-shadow">
+            <div class="w-14 h-14 bg-brand-red/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
+              <Icon name={item.icon} class="w-7 h-7 text-brand-red" />
+            </div>
+            <h3 class="font-display font-bold text-neutral-900 mb-2">{item.title}</h3>
+            <p class="text-neutral-600 text-sm leading-relaxed">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Past Events -->
+  <section class="bg-white py-20 sm:py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <SectionHeader
+        title="Past Events"
+        subtitle="Over 20 years of bringing holiday joy to our community."
+      />
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {[
+          { year: '2023', title: 'Operation: Holiday Cheer 2023', desc: 'Another incredible year — over 200 children received personalized gifts, outfits, and a day full of joy.' },
+          { year: '2022', title: 'Operation: Holiday Cheer 2022', desc: 'Returned in full force after the pandemic years, with record-breaking participation from donors and volunteers.' },
+          { year: '2021', title: 'Operation: Holiday Cheer 2021', desc: 'Adapted our format to continue serving families safely, delivering gifts and care packages to children in need.' },
+          { year: '2020', title: 'Holiday Care Drive 2020', desc: 'During the height of the pandemic, we pivoted to a contactless care drive to ensure no child was left without a gift.' },
+          { year: '2019', title: 'Operation: Holiday Cheer 2019', desc: 'A milestone year celebrating 17 years of community service, with expanded participation and new community partners.' },
+          { year: '2018', title: 'Operation: Holiday Cheer 2018', desc: 'Brought joy to over 150 children with the support of local businesses, schools, and faithful volunteers.' },
+        ].map(event => (
+          <div class="border border-neutral-200 rounded-2xl p-6 hover:border-brand-red/30 hover:shadow-md transition-all">
+            <div class="inline-block bg-brand-gold-pale text-brand-gold font-bold text-sm px-3 py-1 rounded-full mb-4">{event.year}</div>
+            <h3 class="font-display font-bold text-neutral-900 mb-2">{event.title}</h3>
+            <p class="text-neutral-600 text-sm leading-relaxed">{event.desc}</p>
+          </div>
+        ))}
+      </div>
+
+      <div class="text-center mt-10">
+        <p class="text-neutral-500 text-sm">
+          Want to see photos from past events? <a href="/gallery" class="text-brand-red font-medium hover:underline">Visit our Gallery</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="bg-neutral-900 py-16">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <Icon name="mdi:calendar-plus" class="w-12 h-12 text-brand-gold-light mx-auto mb-6" />
+      <h2 class="font-display font-bold text-3xl sm:text-4xl text-white mb-4">
+        Be Part of the Next Event
+      </h2>
+      <p class="text-neutral-400 text-lg leading-relaxed mb-8">
+        Operation: Holiday Cheer runs on the generosity of donors and the energy of volunteers. We'd love to have you join us.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <DonateButton href="/donate" label="Sponsor a Child" variant="gold" size="lg" />
+        <DonateButton href="/get-involved" label="Volunteer" variant="outline" size="lg" />
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

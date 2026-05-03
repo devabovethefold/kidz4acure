@@ -1,0 +1,167 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import DonateButton from '../components/DonateButton.astro';
+import { Icon } from 'astro-icon/components';
+---
+
+<BaseLayout
+  title="In Memoriam"
+  description="Kidz 4 A Cure was founded in memory of Kimberly Johnson and Ceyra. This page honors their lives, their spirits, and the legacy they left behind."
+>
+
+  <!-- Page Hero — Subdued, dignified -->
+  <section class="bg-gradient-to-b from-neutral-800 to-neutral-900 py-20 sm:py-28 text-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <Icon name="mdi:candle" class="w-14 h-14 text-brand-gold-light mx-auto mb-6 opacity-90" />
+      <h1 class="font-display font-bold text-4xl sm:text-5xl lg:text-6xl leading-tight mb-6">
+        In Memoriam
+      </h1>
+      <p class="text-lg sm:text-xl text-white/75 leading-relaxed max-w-2xl mx-auto italic">
+        "For Those We Love, For Those We've Lost"
+      </p>
+    </div>
+  </section>
+
+  <!-- Introduction -->
+  <section class="bg-neutral-50 py-16 sm:py-20">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <p class="text-neutral-700 text-lg leading-relaxed">
+        Kidz 4 A Cure exists because of love. Two young lives — too brief, too bright — inspired a mission that has touched hundreds of children over two decades. This page is dedicated to honoring them.
+      </p>
+    </div>
+  </section>
+
+  <!-- Kimberly Johnson -->
+  <section class="bg-white py-16 sm:py-24 border-b border-neutral-100">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <!-- Photo Placeholder -->
+        <div class="flex flex-col items-center">
+          <div class="w-56 h-56 rounded-full bg-neutral-200 flex items-center justify-center mb-6 ring-4 ring-brand-gold/20 shadow-lg">
+            <Icon name="mdi:account-circle" class="w-40 h-40 text-neutral-400" />
+          </div>
+          <div class="text-center">
+            <div class="inline-block bg-brand-gold-pale text-brand-gold text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-wider">
+              Photo Placeholder
+            </div>
+          </div>
+        </div>
+
+        <!-- Content -->
+        <div>
+          <div class="inline-flex items-center gap-2 text-neutral-500 text-sm mb-4">
+            <Icon name="mdi:heart" class="w-4 h-4 text-brand-red" />
+            <span>The Heart of Our Mission</span>
+          </div>
+          <h2 class="font-display font-bold text-3xl sm:text-4xl text-neutral-900 mb-2 leading-tight">
+            Kimberly Johnson
+          </h2>
+          <p class="text-neutral-500 text-sm font-medium mb-6 tracking-wide">
+            1992 — 2000 &nbsp;·&nbsp; Age 8
+          </p>
+          <div class="space-y-4 text-neutral-700 leading-relaxed">
+            <p>
+              Kimberly was adopted by Lorraine Cram — and she was, by every account, a child full of life, laughter, and a spirit too big for her small frame. She loved the holidays. She loved being celebrated.
+            </p>
+            <p>
+              In 2000, Kimberly lost her battle with HIV/AIDS at the age of eight years old. Her passing left a void that no words could fill. But it also left behind something else: a profound question that Lorraine refused to let go unanswered.
+            </p>
+            <p>
+              What if every child like Kimberly — every child navigating illness, hardship, and uncertainty — could feel, at least once a year, exactly how loved and valued they truly are?
+            </p>
+            <p>
+              Kidz 4 A Cure is Lorraine's answer to that question. Kimberly's name, and her memory, travels in every gift given, every wish fulfilled, every child told: <em class="text-neutral-900">"You matter."</em>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ceyra -->
+  <section class="bg-neutral-50 py-16 sm:py-24">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <!-- Content -->
+        <div class="order-2 lg:order-1">
+          <div class="inline-flex items-center gap-2 text-neutral-500 text-sm mb-4">
+            <Icon name="mdi:heart" class="w-4 h-4 text-brand-red" />
+            <span>Added to the Team in 2010</span>
+          </div>
+          <h2 class="font-display font-bold text-3xl sm:text-4xl text-neutral-900 mb-2 leading-tight">
+            Ceyra
+          </h2>
+          <p class="text-neutral-500 text-sm font-medium mb-6 tracking-wide">
+            Passed 2010
+          </p>
+          <div class="space-y-4 text-neutral-700 leading-relaxed">
+            <p>
+              Lorraine's second adopted daughter, Ceyra, passed away in 2010. Like Kimberly before her, Ceyra's life was full of love — and far too short.
+            </p>
+            <p>
+              After Ceyra's passing, Lorraine added her name to the Kidz 4 A Cure team shirts. Side by side — Kimberly and Ceyra — their names have been carried on every AIDS Walk, at every Operation: Holiday Cheer, with every gift wrapped and delivered.
+            </p>
+            <p>
+              Their stories are the reason this organization exists. Their spirits are woven into every act of service K4AC performs. Every child who receives a gift in their honor carries a piece of their legacy forward.
+            </p>
+          </div>
+        </div>
+
+        <!-- Photo Placeholder -->
+        <div class="order-1 lg:order-2 flex flex-col items-center">
+          <div class="w-56 h-56 rounded-full bg-neutral-200 flex items-center justify-center mb-6 ring-4 ring-brand-gold/20 shadow-lg">
+            <Icon name="mdi:account-circle" class="w-40 h-40 text-neutral-400" />
+          </div>
+          <div class="text-center">
+            <div class="inline-block bg-brand-gold-pale text-brand-gold text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-wider">
+              Photo Placeholder
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quote / Reflection -->
+  <section class="bg-neutral-900 py-16 sm:py-24">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <Icon name="mdi:format-quote-open" class="w-10 h-10 text-brand-gold-light mx-auto mb-6 opacity-60" />
+      <blockquote class="font-display font-bold text-2xl sm:text-3xl text-white leading-relaxed mb-8">
+        Their names travel with us. Their love is the foundation of everything we build.
+      </blockquote>
+      <p class="text-neutral-400 leading-relaxed text-lg">
+        When a child receives a gift through Operation: Holiday Cheer, they are receiving something that Kimberly and Ceyra's memory made possible. They are part of a legacy of love that grows every single year.
+      </p>
+    </div>
+  </section>
+
+  <!-- Tribute section -->
+  <section class="bg-white py-16 sm:py-20">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div class="w-16 h-16 bg-brand-gold/10 rounded-full flex items-center justify-center mx-auto mb-6">
+        <Icon name="mdi:flower-outline" class="w-8 h-8 text-brand-gold" />
+      </div>
+      <h2 class="font-display font-bold text-2xl sm:text-3xl text-neutral-900 mb-4">
+        Leave a Tribute
+      </h2>
+      <p class="text-neutral-600 leading-relaxed mb-8">
+        Would you like to leave a message in memory of Kimberly or Ceyra, or share a memory of someone you've loved and lost to HIV/AIDS? Reach out to us — we'd be honored to hear your story.
+      </p>
+      <a
+        href="mailto:kidz4acure1993@gmail.com?subject=In Memoriam Tribute"
+        class="inline-flex items-center gap-2 bg-neutral-900 text-white font-semibold px-6 py-3 rounded-full hover:bg-neutral-800 transition-colors"
+      >
+        <Icon name="mdi:email-outline" class="w-4 h-4" />
+        Share a Memory
+      </a>
+
+      <div class="mt-12 pt-8 border-t border-neutral-100">
+        <p class="text-neutral-500 text-sm leading-relaxed mb-6">
+          Honor their memory with a gift that changes a child's life.
+        </p>
+        <DonateButton href="/donate" label="Donate in Their Memory" variant="primary" size="md" />
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

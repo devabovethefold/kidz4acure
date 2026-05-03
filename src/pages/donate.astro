@@ -1,0 +1,231 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import DonateButton from '../components/DonateButton.astro';
+import SectionHeader from '../components/SectionHeader.astro';
+import { Icon } from 'astro-icon/components';
+---
+
+<BaseLayout
+  title="Donate"
+  description="Give a child the gift of being remembered. Donate to Kidz 4 A Cure and sponsor a child's holiday wishes. 100% tax-deductible 501(c)(3) nonprofit."
+>
+
+  <!-- Page Hero -->
+  <section class="bg-gradient-to-br from-brand-red-dark to-brand-red py-20 sm:py-28 text-white relative overflow-hidden">
+    <div class="absolute inset-0 opacity-10">
+      <div class="absolute bottom-0 right-0 w-64 h-64 rounded-full bg-brand-gold blur-3xl"></div>
+      <div class="absolute top-0 left-0 w-48 h-48 rounded-full bg-white blur-3xl"></div>
+    </div>
+    <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <Icon name="mdi:gift" class="w-14 h-14 text-brand-gold-light mx-auto mb-6" />
+      <h1 class="font-display font-bold text-4xl sm:text-5xl lg:text-6xl leading-tight mb-6">
+        Give a Child the Gift<br />of Being Remembered
+      </h1>
+      <p class="text-lg sm:text-xl text-white/85 leading-relaxed max-w-2xl mx-auto">
+        Your donation directly fulfills a personal holiday wish for a child who needs to know they are loved. This is not generic charity — it's personal.
+      </p>
+    </div>
+  </section>
+
+  <!-- Donation Tiers -->
+  <section class="bg-white py-20 sm:py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <SectionHeader
+        title="Choose Your Gift Level"
+        subtitle="Every dollar goes directly toward making a child's holiday wish come true."
+      />
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- $25 -->
+        <div class="border-2 border-neutral-200 rounded-2xl p-8 hover:border-brand-gold hover:shadow-md transition-all flex flex-col">
+          <div class="font-display font-bold text-5xl text-neutral-900 mb-1">$25</div>
+          <div class="text-brand-gold font-semibold text-xs uppercase tracking-wider mb-4">Gift Contribution</div>
+          <p class="text-neutral-600 leading-relaxed text-sm mb-6 flex-1">
+            Contributes to fulfilling one child's personal holiday wish. A meaningful contribution that goes directly to a child's gift.
+          </p>
+          <ul class="space-y-2 mb-8">
+            {['Contributes to 1 child\'s gift', 'Tax-deductible donation'].map(item => (
+              <li class="flex items-center gap-2 text-sm text-neutral-600">
+                <Icon name="mdi:check-circle" class="w-4 h-4 text-brand-gold flex-shrink-0" />
+                {item}
+              </li>
+            ))}
+          </ul>
+          <a
+            href="#"
+            class="block text-center bg-neutral-100 text-neutral-900 font-semibold py-3 rounded-full hover:bg-neutral-200 transition-colors text-sm"
+          >
+            Give $25
+          </a>
+        </div>
+
+        <!-- $50 -->
+        <div class="border-2 border-brand-red rounded-2xl p-8 shadow-lg relative flex flex-col">
+          <div class="absolute -top-3.5 left-1/2 -translate-x-1/2">
+            <span class="bg-brand-red text-white text-xs font-bold px-4 py-1 rounded-full uppercase tracking-wider">Most Popular</span>
+          </div>
+          <div class="font-display font-bold text-5xl text-neutral-900 mb-1">$50</div>
+          <div class="text-brand-red font-semibold text-xs uppercase tracking-wider mb-4">Full Sponsorship</div>
+          <p class="text-neutral-600 leading-relaxed text-sm mb-6 flex-1">
+            Fully sponsors one child — covering both personal holiday wishes, a new outfit, and extra surprises on event day.
+          </p>
+          <ul class="space-y-2 mb-8">
+            {['Sponsors 1 child\'s 2 wishes', 'New holiday outfit included', 'Extra surprises on event day', 'Tax-deductible donation'].map(item => (
+              <li class="flex items-center gap-2 text-sm text-neutral-600">
+                <Icon name="mdi:check-circle" class="w-4 h-4 text-brand-red flex-shrink-0" />
+                {item}
+              </li>
+            ))}
+          </ul>
+          <a
+            href="#"
+            class="block text-center bg-brand-red text-white font-semibold py-3 rounded-full hover:bg-brand-red-dark transition-colors text-sm"
+          >
+            Sponsor a Child
+          </a>
+        </div>
+
+        <!-- $100 -->
+        <div class="border-2 border-neutral-200 rounded-2xl p-8 hover:border-brand-gold hover:shadow-md transition-all flex flex-col">
+          <div class="font-display font-bold text-5xl text-neutral-900 mb-1">$100</div>
+          <div class="text-brand-gold font-semibold text-xs uppercase tracking-wider mb-4">Family Champion</div>
+          <p class="text-neutral-600 leading-relaxed text-sm mb-6 flex-1">
+            Sponsor a sibling group or entire family — ensuring every child in the household feels equally loved this holiday season.
+          </p>
+          <ul class="space-y-2 mb-8">
+            {['Sponsors a sibling group', 'All outfits & wishes covered', 'Family-focused celebration', 'Tax-deductible donation'].map(item => (
+              <li class="flex items-center gap-2 text-sm text-neutral-600">
+                <Icon name="mdi:check-circle" class="w-4 h-4 text-brand-gold flex-shrink-0" />
+                {item}
+              </li>
+            ))}
+          </ul>
+          <a
+            href="#"
+            class="block text-center bg-neutral-100 text-neutral-900 font-semibold py-3 rounded-full hover:bg-neutral-200 transition-colors text-sm"
+          >
+            Champion a Family
+          </a>
+        </div>
+
+        <!-- Custom -->
+        <div class="border-2 border-neutral-200 rounded-2xl p-8 hover:border-brand-gold hover:shadow-md transition-all flex flex-col bg-neutral-50">
+          <div class="font-display font-bold text-5xl text-neutral-900 mb-1">Any</div>
+          <div class="text-neutral-500 font-semibold text-xs uppercase tracking-wider mb-4">Custom Amount</div>
+          <p class="text-neutral-600 leading-relaxed text-sm mb-6 flex-1">
+            Give any amount that feels right. Every dollar makes a real difference in the life of a child who needs to feel celebrated.
+          </p>
+          <ul class="space-y-2 mb-8">
+            {['Give any amount', '100% goes to program', 'Tax-deductible donation'].map(item => (
+              <li class="flex items-center gap-2 text-sm text-neutral-600">
+                <Icon name="mdi:check-circle" class="w-4 h-4 text-neutral-400 flex-shrink-0" />
+                {item}
+              </li>
+            ))}
+          </ul>
+          <a
+            href="#"
+            class="block text-center border-2 border-neutral-900 text-neutral-900 font-semibold py-3 rounded-full hover:bg-neutral-900 hover:text-white transition-colors text-sm"
+          >
+            Custom Donation
+          </a>
+        </div>
+      </div>
+
+      <!-- 501c3 Callout -->
+      <div class="mt-10 bg-brand-gold-pale border border-brand-gold/30 rounded-2xl p-5 flex items-start gap-4 max-w-2xl mx-auto">
+        <Icon name="mdi:check-decagram" class="w-6 h-6 text-brand-gold flex-shrink-0 mt-0.5" />
+        <p class="text-neutral-700 text-sm leading-relaxed">
+          <strong>Kidz 4 A Cure is a registered 501(c)(3) nonprofit organization.</strong> All donations are fully tax-deductible to the extent permitted by law. You will receive a receipt for your records.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Amazon Wish List -->
+  <section class="bg-brand-cream py-16">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+        <div>
+          <div class="inline-flex items-center gap-2 bg-brand-gold/10 rounded-full px-4 py-2 mb-5">
+            <Icon name="mdi:cart-outline" class="w-4 h-4 text-brand-gold" />
+            <span class="text-sm text-brand-gold font-medium">Shop Directly</span>
+          </div>
+          <h2 class="font-display font-bold text-2xl sm:text-3xl text-neutral-900 mb-4 leading-tight">
+            Shop Our Amazon Wish List
+          </h2>
+          <p class="text-neutral-700 leading-relaxed mb-6">
+            Prefer to shop directly? Browse our curated Amazon Wish List and purchase items that will go directly to children participating in Operation: Holiday Cheer. Items are shipped straight to us — making it simple and seamless.
+          </p>
+          <a
+            href="#"
+            class="inline-flex items-center gap-2 bg-neutral-900 text-white font-semibold px-6 py-3 rounded-full hover:bg-neutral-800 transition-colors"
+          >
+            <Icon name="mdi:open-in-new" class="w-4 h-4" />
+            Shop Our Amazon List
+          </a>
+        </div>
+
+        <div class="bg-white rounded-2xl p-6 shadow-sm border border-neutral-200">
+          <div class="w-12 h-12 bg-brand-red/10 rounded-xl flex items-center justify-center mb-4">
+            <Icon name="mdi:gift-outline" class="w-6 h-6 text-brand-red" />
+          </div>
+          <h3 class="font-display font-bold text-neutral-900 mb-3">What Your Gift Buys</h3>
+          <ul class="space-y-3">
+            {[
+              { icon: 'mdi:toy-brick-outline', label: 'Toys, games, and books' },
+              { icon: 'mdi:tshirt-crew-outline', label: 'Holiday clothing and outfits' },
+              { icon: 'mdi:music-note', label: 'Arts, crafts, and musical items' },
+              { icon: 'mdi:gamepad-variant-outline', label: 'Electronics and accessories' },
+              { icon: 'mdi:star-outline', label: 'Surprise gifts and extras' },
+            ].map(item => (
+              <li class="flex items-center gap-3 text-sm text-neutral-700">
+                <Icon name={item.icon} class="w-4 h-4 text-brand-red flex-shrink-0" />
+                {item.label}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact / Direct -->
+  <section class="bg-neutral-900 py-16">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+        <div class="text-white">
+          <h2 class="font-display font-bold text-2xl sm:text-3xl mb-4">Questions About Donating?</h2>
+          <p class="text-neutral-400 leading-relaxed mb-6">
+            We're a small team and we love hearing from our donors. Reach out any time with questions about how to give, how your gift is used, or how to get more involved.
+          </p>
+          <div class="space-y-3">
+            <a href="tel:7542449569" class="flex items-center gap-3 text-neutral-300 hover:text-brand-gold-light transition-colors">
+              <Icon name="mdi:phone" class="w-5 h-5 text-brand-gold-light" />
+              754-244-9569
+            </a>
+            <a href="mailto:kidz4acure1993@gmail.com" class="flex items-center gap-3 text-neutral-300 hover:text-brand-gold-light transition-colors">
+              <Icon name="mdi:email-outline" class="w-5 h-5 text-brand-gold-light" />
+              kidz4acure1993@gmail.com
+            </a>
+          </div>
+        </div>
+
+        <div class="bg-white/5 rounded-2xl p-6 border border-white/10 text-center">
+          <Icon name="mdi:heart-multiple-outline" class="w-12 h-12 text-brand-gold-light mx-auto mb-4" />
+          <h3 class="font-display font-bold text-white text-xl mb-2">Every Dollar Matters</h3>
+          <p class="text-neutral-400 text-sm leading-relaxed mb-5">
+            Whether it's $5 or $500, your generosity helps us bring the magic of the holidays to children who need it most.
+          </p>
+          <a
+            href="#"
+            class="inline-flex items-center gap-2 bg-brand-gold text-white font-semibold px-6 py-3 rounded-full hover:bg-amber-700 transition-colors"
+          >
+            Donate Now
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>
